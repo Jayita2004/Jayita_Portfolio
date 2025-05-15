@@ -1,6 +1,6 @@
 import { AnimatedText } from "@/components/AnimatedText";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, Brain, Code } from "lucide-react";
+import { ArrowRight, Download, Brain, Code, Github, Linkedin, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -21,10 +21,22 @@ const ProfileImagePlaceholder = () => (
       {/* <img src="/path/to/jayita-profile.jpg" alt="Jayita Maji" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" style={{ borderRadius: 'inherit' }} /> */}
        <span className="transition-transform duration-300 group-hover:translate-y-[-10px]">JM</span>
     </div>
-     {/* Placeholder social icons, to be animated and positioned closer */}
-    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        {/* Icons here later */}
-    </div>
+    <motion.div 
+      className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3 flex space-x-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-1/4 transition-all duration-300"
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.6, duration: 0.4 }} // Added slight animation for icons
+    >
+        <a href="https://github.com/Jayita2004" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-[hsl(var(--theme-text))] hover:text-[hsl(var(--theme-primary))] transition-colors p-2 bg-[hsla(var(--theme-bg-start),0.7)] rounded-full shadow-md hover:shadow-lg backdrop-blur-sm">
+            <Github size={20} />
+        </a>
+        <a href="https://www.linkedin.com/in/jayita-maji-b94360251/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="text-[hsl(var(--theme-text))] hover:text-[hsl(var(--theme-primary))] transition-colors p-2 bg-[hsla(var(--theme-bg-start),0.7)] rounded-full shadow-md hover:shadow-lg backdrop-blur-sm"> {/* TODO: Add actual LinkedIn URL */}
+            <Linkedin size={20} />
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile" className="text-[hsl(var(--theme-text))] hover:text-[hsl(var(--theme-primary))] transition-colors p-2 bg-[hsla(var(--theme-bg-start),0.7)] rounded-full shadow-md hover:shadow-lg backdrop-blur-sm"> {/* TODO: Add actual Twitter URL */}
+            <Twitter size={20} />
+        </a>
+    </motion.div>
   </div>
 );
 
@@ -33,7 +45,7 @@ const HomePage = () => {
     <div className="container-max section-padding">
       <div className="grid md:grid-cols-2 gap-12 items-center min-h-[calc(100vh-200px)]">
         <motion.div 
-          className="text-center md:text-left"
+          className="text-center md:text-left px-2 sm:px-0" // Added small horizontal padding for very small screens
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
@@ -47,13 +59,12 @@ const HomePage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Button asChild size="lg" className="bg-[hsl(var(--theme-primary))] text-[hsl(var(--primary-foreground))] hover:bg-[hsl(var(--theme-accent))] transition-all duration-300 group">
-              <Link to="/portfolio">
-                View Portfolio <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <Link to="/portfolio"> {/* This path will still work even if nav text changes */}
+                View Projects <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild className="border-[hsl(var(--theme-primary))] text-[hsl(var(--theme-primary))] hover:bg-[hsla(var(--theme-primary),0.1)] hover:text-[hsl(var(--theme-accent))] group">
-              {/* Link to CV, replace # with actual path later */}
-              <a href="#" download="Jayita_Maji_CV.pdf"> 
+              <a href="/Jayita_Maji_Resume.pdf" download="Jayita_Maji_CV.pdf">  {/* Replace # with actual CV path, ensure CV is in public folder */}
                 Download CV <Download className="ml-2 h-5 w-5 group-hover:rotate-[15deg] transition-transform" />
               </a>
             </Button>

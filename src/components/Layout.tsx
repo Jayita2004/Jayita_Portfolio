@@ -12,10 +12,10 @@ export function Layout() {
       <AnimatePresence mode="wait">
         <motion.main
           key={location.pathname}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
+          initial={{ opacity: 0 }} // Simplified: only fade
+          animate={{ opacity: 1 }} // Simplified: only fade
+          exit={{ opacity: 0 }}    // Simplified: only fade
+          transition={{ duration: 0.2 }} // Faster transition
           className="flex-grow"
         >
           <Outlet />
@@ -25,3 +25,4 @@ export function Layout() {
     </div>
   );
 }
+

@@ -3,13 +3,13 @@ import { Link, NavLink } from "react-router-dom";
 import { ThemeToggle } from "./ThemeToggle";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"; // Assuming shadcn/ui
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import React from "react";
 
 const navItems = [
   { name: "About", path: "/about" },
   { name: "Skills", path: "/skills" },
-  { name: "Portfolio", path: "/portfolio" },
+  { name: "Projects", path: "/portfolio" }, // Changed "Portfolio" to "Projects"
   { name: "Contact", path: "/contact" },
 ];
 
@@ -71,3 +71,4 @@ export function Header() {
     </header>
   );
 }
+
