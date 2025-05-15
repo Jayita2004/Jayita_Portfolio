@@ -1,3 +1,4 @@
+
 import { AnimatedText } from "@/components/AnimatedText";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Brain, Code, Github, Linkedin, Twitter } from "lucide-react";
@@ -12,25 +13,26 @@ const ProfileImagePlaceholder = () => (
                  transition-all duration-300 group-hover:shadow-xl overflow-hidden
                  flex items-center justify-center text-6xl font-bold text-white"
       style={{
-        // Applying a custom border-radius for the blob shape
-        // Removed the complex boxShadow for the thick wavy border, the p-1 and gradient now form a simpler border
         borderRadius: '40% 60% 55% 45% / 60% 50% 55% 45%',
       }}
     >
-      {/* Replace with actual image when available */}
-      {/* <img src="/path/to/jayita-profile.jpg" alt="Jayita Maji" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" style={{ borderRadius: 'inherit' }} /> */}
-       <span className="transition-transform duration-300 group-hover:translate-y-[-10px]">JM</span>
+      <img 
+        src="https://aicdn.picsart.com/5f6e9fb0-110c-49e8-ad5b-8c3c21ff0c9f.png" 
+        alt="Jayita Maji" 
+        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+        style={{ borderRadius: 'inherit' }} 
+      />
     </div>
     <motion.div 
       className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3 flex space-x-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-1/4 transition-all duration-300"
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.6, duration: 0.4 }} // Added slight animation for icons
+      transition={{ delay: 0.6, duration: 0.4 }}
     >
         <a href="https://github.com/Jayita2004" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-[hsl(var(--theme-text))] hover:text-[hsl(var(--theme-primary))] transition-colors p-2 bg-[hsla(var(--theme-bg-start),0.7)] rounded-full shadow-md hover:shadow-lg backdrop-blur-sm">
             <Github size={20} />
         </a>
-        <a href="https://www.linkedin.com/in/jayita-maji-b94360251/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="text-[hsl(var(--theme-text))] hover:text-[hsl(var(--theme-primary))] transition-colors p-2 bg-[hsla(var(--theme-bg-start),0.7)] rounded-full shadow-md hover:shadow-lg backdrop-blur-sm"> {/* TODO: Add actual LinkedIn URL */}
+        <a href="https://www.linkedin.com/in/jayita-maji-b94360251/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="text-[hsl(var(--theme-text))] hover:text-[hsl(var(--theme-primary))] transition-colors p-2 bg-[hsla(var(--theme-bg-start),0.7)] rounded-full shadow-md hover:shadow-lg backdrop-blur-sm">
             <Linkedin size={20} />
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile" className="text-[hsl(var(--theme-text))] hover:text-[hsl(var(--theme-primary))] transition-colors p-2 bg-[hsla(var(--theme-bg-start),0.7)] rounded-full shadow-md hover:shadow-lg backdrop-blur-sm"> {/* TODO: Add actual Twitter URL */}
