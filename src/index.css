@@ -36,13 +36,13 @@
 
     --radius: 0.75rem;
 
-    /* Custom theme specific variables */
-    --theme-primary: 205 90% 50%; /* Bright Blue */
-    --theme-secondary: 210 60% 65%; /* Medium Blue */
-    --theme-accent: 195 85% 40%; /* Deep Sky Blue */
-    --theme-text: 220 30% 25%; /* Dark Slate Blue */
-    --theme-bg-start: 200 100% 90%; /* Pale Blue */
-    --theme-bg-end: 0 0% 100%;     /* White */
+    /* Custom theme specific variables - Updated for more "eye-catching" look */
+    --theme-primary: 205 90% 50%; 
+    --theme-secondary: 210 60% 65%; 
+    --theme-accent: 195 85% 40%; 
+    --theme-text: 220 30% 25%; 
+    --theme-bg-start: 195 90% 85%; /* Lighter, brighter cyan-blue */
+    --theme-bg-end: 210 90% 95%;   /* Very light, almost white blue */
   }
 
   .dark {
@@ -75,13 +75,13 @@
     --input: 217.2 32.6% 20.5%; /* Dark blue input bg */
     --ring: 200 80% 60%; /* Brighter blue ring */
 
-    /* Custom theme specific variables */
-    --theme-primary: 200 80% 60%;   /* Sky Blue */
-    --theme-secondary: 210 70% 45%; /* Steel Blue */
-    --theme-accent: 190 90% 55%;    /* Bright Cerulean */
-    --theme-text: 210 40% 95%;      /* Almost White */
-    --theme-bg-start: 220 50% 15%;  /* Deep Navy */
-    --theme-bg-end: 210 60% 25%;    /* Darker Blue */
+    /* Custom theme specific variables - Updated for more "eye-catching" look */
+    --theme-primary: 200 80% 60%;   
+    --theme-secondary: 210 70% 45%; 
+    --theme-accent: 190 90% 55%;    
+    --theme-text: 210 40% 95%;      
+    --theme-bg-start: 220 60% 10%;  /* Even deeper navy */
+    --theme-bg-end: 200 70% 20%;    /* Dark cyan-blue */
   }
 }
 
@@ -103,11 +103,12 @@
     @apply font-heading text-[hsl(var(--theme-text))];
   }
   p, span, li, a, label, input, textarea, button {
-     @apply text-[hsl(var(--theme-text))];
+     @apply text-[hsl(var(--theme-text))]; /* Ensures base text color uses theme variable */
   }
   
-  /* Ensure buttons from shadcn/ui also use theme text color */
-  .shadcn-button { /* You might need to adjust this class or apply it directly */
+  /* Ensure buttons from shadcn/ui also use theme text color correctly if needed */
+  /* This might need more specific targeting if default button text isn't as expected */
+  .shadcn-button { 
     @apply text-[hsl(var(--primary-foreground))];
   }
   .dark .shadcn-button {

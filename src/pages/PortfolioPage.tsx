@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react"; // Changed from ExternalLink to Plus
+import { Plus } from "lucide-react";
 
 const projects = [
   {
@@ -32,14 +32,14 @@ const PortfolioPage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        My Projects {/* Kept consistent with nav, reference image shows "Recent Works" */}
+        My Projects
       </motion.h1>
       
       <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <motion.div 
             key={project.title}
-            className="bg-card rounded-xl shadow-xl overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-2xl"
+            className="bg-card/70 dark:bg-card/40 backdrop-blur-md border border-[hsl(var(--border)/0.2)] rounded-xl shadow-xl overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-2xl hover:border-[hsl(var(--theme-accent))] hover:scale-[1.02]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
