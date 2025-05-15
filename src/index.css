@@ -1,11 +1,13 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Light Theme - Blue focused */
+    --background: 210 40% 98%; /* Very light blue-gray */
+    --foreground: 222.2 84% 4.9%; /* Dark blue for text */
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -13,47 +15,40 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 205 90% 50%; /* Bright blue */
+    --primary-foreground: 210 40% 98%; /* White text on primary */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 40% 90%; /* Lighter blue */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* Dark blue text on secondary */
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 195 85% 45%; /* Slightly different blue for accents */
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 200 50% 85%; /* Light blue border */
+    --input: 200 50% 90%; /* Light blue input bg */
+    --ring: 205 90% 50%; /* Bright blue ring */
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Custom theme specific variables */
+    --theme-primary: 205 90% 50%; /* Bright Blue */
+    --theme-secondary: 210 60% 65%; /* Medium Blue */
+    --theme-accent: 195 85% 40%; /* Deep Sky Blue */
+    --theme-text: 220 30% 25%; /* Dark Slate Blue */
+    --theme-bg-start: 200 100% 90%; /* Pale Blue */
+    --theme-bg-end: 0 0% 100%;     /* White */
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark Theme - Blue focused */
+    --background: 222.2 84% 4.9%; /* Very dark blue */
+    --foreground: 210 40% 98%; /* Light gray/white text */
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -61,32 +56,32 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 210 40% 98%; /* Light gray/white for primary elements */
+    --primary-foreground: 222.2 47.4% 11.2%; /* Dark blue text on primary */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 17.5%; /* Darker blue */
+    --secondary-foreground: 210 40% 98%; /* Light text on secondary */
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 200 80% 60%; /* Brighter blue for accents in dark mode */
+    --accent-foreground: 222.2 84% 4.9%; /* Dark blue text on accent */
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 217.2 32.6% 25.5%; /* Dark blue border */
+    --input: 217.2 32.6% 20.5%; /* Dark blue input bg */
+    --ring: 200 80% 60%; /* Brighter blue ring */
+
+    /* Custom theme specific variables */
+    --theme-primary: 200 80% 60%;   /* Sky Blue */
+    --theme-secondary: 210 70% 45%; /* Steel Blue */
+    --theme-accent: 190 90% 55%;    /* Bright Cerulean */
+    --theme-text: 210 40% 95%;      /* Almost White */
+    --theme-bg-start: 220 50% 15%;  /* Deep Navy */
+    --theme-bg-end: 210 60% 25%;    /* Darker Blue */
   }
 }
 
@@ -95,7 +90,41 @@
     @apply border-border;
   }
 
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-br from-[hsl(var(--theme-bg-start))] to-[hsl(var(--theme-bg-end))] text-foreground font-sans transition-colors duration-500;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-[hsl(var(--theme-text))];
+  }
+  p, span, li, a, label, input, textarea, button {
+     @apply text-[hsl(var(--theme-text))];
+  }
+  
+  /* Ensure buttons from shadcn/ui also use theme text color */
+  .shadcn-button { /* You might need to adjust this class or apply it directly */
+    @apply text-[hsl(var(--primary-foreground))];
+  }
+  .dark .shadcn-button {
+     @apply text-[hsl(var(--primary-foreground))];
+  }
+
+  ::selection {
+    background-color: hsl(var(--theme-accent));
+    color: hsl(var(--primary-foreground));
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  .container-max {
+    @apply max-w-7xl mx-auto;
   }
 }
