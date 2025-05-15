@@ -1,32 +1,24 @@
-
 import { AnimatedText } from "@/components/AnimatedText";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Brain, Code } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-// Placeholder for profile image
+// Updated ProfileImagePlaceholder
 const ProfileImagePlaceholder = () => (
   <div className="relative group">
     <div 
-      className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-[hsl(var(--theme-secondary))] to-[hsl(var(--theme-primary))] p-1 shadow-lg 
+      className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-[hsl(var(--theme-secondary))] to-[hsl(var(--theme-primary))] p-1 shadow-lg 
                  transition-all duration-300 group-hover:shadow-xl overflow-hidden
                  flex items-center justify-center text-6xl font-bold text-white"
       style={{
-        // Simple thick wavy border using multiple box-shadows or border-image (complex)
-        // For V1, a gradient border from the div itself.
-        // A more "wavy" effect can be achieved with SVG or pseudo-elements if needed in iteration.
-        // Example of a slightly more styled border:
-        boxShadow: `
-          0 0 0 5px hsl(var(--theme-bg-start)), 
-          0 0 0 10px hsl(var(--theme-accent)), 
-          0 0 0 15px hsl(var(--theme-bg-start)),
-          0 0 30px 20px hsla(var(--theme-accent), 0.3)
-        `
+        // Applying a custom border-radius for the blob shape
+        // Removed the complex boxShadow for the thick wavy border, the p-1 and gradient now form a simpler border
+        borderRadius: '40% 60% 55% 45% / 60% 50% 55% 45%',
       }}
     >
       {/* Replace with actual image when available */}
-      {/* <img src="/path/to/jayita-profile.jpg" alt="Jayita Maji" className="w-full h-full object-cover rounded-full transition-transform duration-300 group-hover:scale-105" /> */}
+      {/* <img src="/path/to/jayita-profile.jpg" alt="Jayita Maji" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" style={{ borderRadius: 'inherit' }} /> */}
        <span className="transition-transform duration-300 group-hover:translate-y-[-10px]">JM</span>
     </div>
      {/* Placeholder social icons, to be animated and positioned closer */}
