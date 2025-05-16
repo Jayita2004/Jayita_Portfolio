@@ -9,7 +9,7 @@ import React from "react";
 const navItems = [
   { name: "About", path: "/about" },
   { name: "Skills", path: "/skills" },
-  { name: "Projects", path: "/portfolio" }, // Changed "Portfolio" to "Projects"
+  { name: "Projects", path: "/portfolio" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -71,4 +71,3 @@ export function Header() {
     </header>
   );
 }
-

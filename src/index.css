@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    /* Light Theme - Blue focused */
+    /* Light Theme - Blue focused with deeper accents */
     --background: 210 40% 98%; /* Very light blue-gray */
     --foreground: 222.2 84% 4.9%; /* Dark blue for text */
 
@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 205 90% 50%; /* Bright blue */
+    --primary: 210 85% 45%; /* Brighter blue */
     --primary-foreground: 210 40% 98%; /* White text on primary */
 
     --secondary: 210 40% 90%; /* Lighter blue */
@@ -24,7 +24,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 195 85% 45%; /* Slightly different blue for accents */
+    --accent: 195 90% 40%; /* Vibrant cyan-blue for accents */
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,40 +32,40 @@
 
     --border: 200 50% 85%; /* Light blue border */
     --input: 200 50% 90%; /* Light blue input bg */
-    --ring: 205 90% 50%; /* Bright blue ring */
+    --ring: 210 85% 45%; /* Bright blue ring */
 
     --radius: 0.75rem;
 
     /* Custom theme specific variables - Updated for more "eye-catching" look */
-    --theme-primary: 205 90% 50%; 
-    --theme-secondary: 210 60% 65%; 
-    --theme-accent: 195 85% 40%; 
-    --theme-text: 220 30% 25%; 
-    --theme-bg-start: 195 90% 85%; /* Lighter, brighter cyan-blue */
-    --theme-bg-end: 210 90% 95%;   /* Very light, almost white blue */
+    --theme-primary: 210 85% 45%; 
+    --theme-secondary: 195 85% 55%; 
+    --theme-accent: 250 85% 65%; 
+    --theme-text: 220 30% 20%; 
+    --theme-bg-start: 195 90% 85%; /* Lighter cyan-blue */
+    --theme-bg-end: 210 90% 95%;   /* Very light blue */
   }
 
   .dark {
-    /* Dark Theme - Blue focused */
-    --background: 222.2 84% 4.9%; /* Very dark blue */
+    /* Dark Theme - Blue focused with deeper purples */
+    --background: 232 45% 10%; /* Deep blue-purple background */
     --foreground: 210 40% 98%; /* Light gray/white text */
 
-    --card: 222.2 84% 4.9%;
+    --card: 232 45% 10%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 232 45% 10%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%; /* Light gray/white for primary elements */
+    --primary: 210 85% 60%; /* Bright blue */
     --primary-foreground: 222.2 47.4% 11.2%; /* Dark blue text on primary */
 
-    --secondary: 217.2 32.6% 17.5%; /* Darker blue */
+    --secondary: 217.2 32.6% 20%; /* Darker blue */
     --secondary-foreground: 210 40% 98%; /* Light text on secondary */
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 200 80% 60%; /* Brighter blue for accents in dark mode */
+    --accent: 250 85% 65%; /* Purple accent */
     --accent-foreground: 222.2 84% 4.9%; /* Dark blue text on accent */
 
     --destructive: 0 62.8% 30.6%;
@@ -76,12 +76,12 @@
     --ring: 200 80% 60%; /* Brighter blue ring */
 
     /* Custom theme specific variables - Updated for more "eye-catching" look */
-    --theme-primary: 200 80% 60%;   
-    --theme-secondary: 210 70% 45%; 
-    --theme-accent: 190 90% 55%;    
+    --theme-primary: 210 85% 60%;   
+    --theme-secondary: 250 85% 65%; 
+    --theme-accent: 280 75% 65%;    
     --theme-text: 210 40% 95%;      
-    --theme-bg-start: 220 60% 10%;  /* Even deeper navy */
-    --theme-bg-end: 200 70% 20%;    /* Dark cyan-blue */
+    --theme-bg-start: 232 50% 12%;  /* Deep blue-purple */
+    --theme-bg-end: 250 45% 18%;    /* Deep indigo-purple */
   }
 }
 
@@ -107,7 +107,6 @@
   }
   
   /* Ensure buttons from shadcn/ui also use theme text color correctly if needed */
-  /* This might need more specific targeting if default button text isn't as expected */
   .shadcn-button { 
     @apply text-[hsl(var(--primary-foreground))];
   }
@@ -127,5 +126,23 @@
   }
   .container-max {
     @apply max-w-7xl mx-auto;
+  }
+  
+  /* Added glassmorphism utility classes */
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-xl;
+  }
+  
+  .dark .glass-card {
+    @apply bg-black/20 backdrop-blur-md border border-white/10 rounded-xl;
+  }
+  
+  /* Added animation utility classes */
+  .hover-scale {
+    @apply transition-transform hover:scale-105 duration-300;
+  }
+  
+  .hover-glow {
+    @apply transition-shadow hover:shadow-lg hover:shadow-[hsl(var(--theme-primary)/0.4)] duration-300;
   }
 }
