@@ -1,27 +1,26 @@
-
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import { html, css, PanelLeft, Database, Github, Figma } from "lucide-react"; // Changed Html to html, Css to css
+import { PanelLeft, Database, Github, Figma, CodeXml as Html, Combine as Css } from "lucide-react"; // Changed html to Html (CodeXml), css to Css (Combine), kept others as PascalCase
 import { SkillCard } from "@/components/SkillCard";
 
 const skillsData = {
   frontend: [
-    { name: "HTML", level: 95, icon: html }, // Changed Html to html
-    { name: "CSS", level: 90, icon: css }, // Changed Css to css
-    { name: "JavaScript", level: 80, icon: PanelLeft },
-    { name: "Tailwind CSS", level: 85, icon: css }, // Changed Css to css
+    { name: "HTML", level: 95, icon: Html }, 
+    { name: "CSS", level: 90, icon: Css }, 
+    { name: "JavaScript", level: 80, icon: PanelLeft }, // Kept PanelLeft, consider Brain or FileJson for JS
+    { name: "Tailwind CSS", level: 85, icon: Css }, 
   ],
   backend: [
-    { name: "Node.js", level: 70, icon: PanelLeft },
+    { name: "Node.js", level: 70, icon: PanelLeft }, // Consider Cog or Server for Node.js
     { name: "Express.js (Learning)", level: 50, icon: PanelLeft },
   ],
   database: [
     { name: "MySQL", level: 75, icon: Database },
   ],
   tools: [
-    { name: "Git", level: 85, icon: PanelLeft },
+    { name: "Git", level: 85, icon: PanelLeft }, // Consider GitBranch or GitCommit
     { name: "GitHub", level: 85, icon: Github },
-    { name: "VS Code", level: 90, icon: PanelLeft },
+    { name: "VS Code", level: 90, icon: PanelLeft }, // Consider Code2 or TerminalSquare
     { name: "Figma", level: 70, icon: Figma },
   ],
   professional: [
@@ -72,7 +71,7 @@ const SkillsPage = () => {
               <SkillCard 
                 title="Frontend" 
                 skills={skillsData.frontend}
-                icon={<html size={24} />} 
+                icon={<Html size={24} />} // Changed to Html (CodeXml)
                 delay={0.3}
               />
               
@@ -80,7 +79,7 @@ const SkillsPage = () => {
               <SkillCard 
                 title="Backend" 
                 skills={skillsData.backend}
-                icon={<PanelLeft size={24} />}
+                icon={<PanelLeft size={24} />} // Consider Cog or Server
                 delay={0.4}
               />
               
