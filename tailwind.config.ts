@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -21,6 +22,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         heading: ['Poppins', 'sans-serif'],
+        'roboto-slab': ['"Roboto Slab"', 'serif'], // Added Roboto Slab
       },
 			colors: {
 				border: 'hsl(var(--border))',
@@ -118,3 +120,4 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+

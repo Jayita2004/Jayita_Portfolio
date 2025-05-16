@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { School, Briefcase, Sparkles, Github, Linkedin, Instagram } from "lucide-react"; 
+import { School, Briefcase, Github, Linkedin, Instagram } from "lucide-react"; 
 
 const AboutPage = () => {
   const sectionVariants = {
@@ -62,16 +62,16 @@ const AboutPage = () => {
 
           {/* Text Content - The box requested for removal was here. */}
           <motion.div
-            className="lg:col-span-3 space-y-8"
+            className="lg:col-span-3 space-y-6"
             variants={sectionVariants}
             initial="hidden"
             animate="visible"
             custom={1}
           >
-            {/* The box containing "A creative web developer..." has been removed. */}
-            {/* You can add new content here if needed, or leave it empty if this section is no longer required. */}
-            {/* For example, if there was other introductory text you wanted to keep or add, it would go here. */}
-            {/* If this 'motion.div' is now empty and not needed, it could also be removed, but for now, we are just removing the inner box. */}
+            <p className="text-lg text-[hsl(var(--theme-text))] leading-relaxed text-justify sm:text-left">
+              A creative web developer merging intelligent design with modern technologies to build impactful digital experiences.
+            </p>
+            {/* Additional introductory text or paragraphs can be added here if needed */}
           </motion.div>
         </div>
 

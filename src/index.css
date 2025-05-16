@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,7 +35,7 @@
 
     --radius: 0.75rem;
 
-    /* Custom theme specific variables - Updated for more "eye-catching" look */
+    /* Custom theme specific variables - Light Theme */
     --theme-primary: 210 85% 45%; 
     --theme-secondary: 195 85% 55%; 
     --theme-accent: 250 85% 65%; 
@@ -46,42 +45,42 @@
   }
 
   .dark {
-    /* Dark Theme - Blue focused with deeper purples */
-    --background: 232 45% 10%; /* Deep blue-purple background */
-    --foreground: 210 40% 98%; /* Light gray/white text */
+    /* Dark Theme - "Black Theme" Focus */
+    --background: 220 15% 8%; /* Very dark desaturated blue, almost black */
+    --foreground: 210 30% 92%; /* Light gray/white text */
 
-    --card: 232 45% 10%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 15% 12%; /* Slightly lighter than background for cards */
+    --card-foreground: 210 30% 92%;
 
-    --popover: 232 45% 10%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 15% 10%; /* Darker popover */
+    --popover-foreground: 210 30% 92%;
 
-    --primary: 210 85% 60%; /* Bright blue */
-    --primary-foreground: 222.2 47.4% 11.2%; /* Dark blue text on primary */
+    --primary: 210 80% 60%; /* A noticeable blue, but not overly bright */
+    --primary-foreground: 220 15% 15%; /* Dark text on primary */
 
-    --secondary: 217.2 32.6% 20%; /* Darker blue */
-    --secondary-foreground: 210 40% 98%; /* Light text on secondary */
+    --secondary: 220 15% 18%; /* Darker secondary */
+    --secondary-foreground: 210 30% 85%; /* Lighter text on secondary */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 10% 15%;
+    --muted-foreground: 210 20% 60%;
 
-    --accent: 250 85% 65%; /* Purple accent */
-    --accent-foreground: 222.2 84% 4.9%; /* Dark blue text on accent */
+    --accent: 260 70% 60%; /* A deep purple accent */
+    --accent-foreground: 210 30% 95%; 
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 25.5%; /* Dark blue border */
-    --input: 217.2 32.6% 20.5%; /* Dark blue input bg */
-    --ring: 200 80% 60%; /* Brighter blue ring */
+    --border: 220 10% 20%; /* Dark border */
+    --input: 220 10% 18%; /* Dark input bg */
+    --ring: 210 80% 55%; /* Ring color that stands out on dark bg */
 
-    /* Custom theme specific variables - Updated for more "eye-catching" look */
-    --theme-primary: 210 85% 60%;   
-    --theme-secondary: 250 85% 65%; 
-    --theme-accent: 280 75% 65%;    
-    --theme-text: 210 40% 95%;      
-    --theme-bg-start: 232 50% 12%;  /* Deep blue-purple */
-    --theme-bg-end: 250 45% 18%;    /* Deep indigo-purple */
+    /* Custom theme specific variables - "Black Theme" */
+    --theme-primary: 210 80% 60%;   
+    --theme-secondary: 260 70% 55%; /* Deep purple secondary */
+    --theme-accent: 280 70% 60%; /* Another violet/purple accent */    
+    --theme-text: 210 30% 92%;      
+    --theme-bg-start: 220 20% 6%;  /* Very dark, almost black */
+    --theme-bg-end: 230 20% 10%;    /* Darker gradient end */
   }
 }
 

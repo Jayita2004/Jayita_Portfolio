@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Brain, Code, Github, Linkedin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -62,8 +63,8 @@ const HomePage = () => {
               <h2 className="text-xl md:text-2xl font-medium text-[hsl(var(--theme-text))] mb-1">Hello I'm</h2> 
               <h1 className="text-4xl lg:text-5xl font-bold text-[hsl(var(--theme-primary))]">Jayita Maji</h1>
             </div>
-            <div className="mb-8"> {/* Adjusted wrapper for static text */}
-              <p className="text-xl lg:text-2xl text-[hsl(var(--theme-text))]">
+            <div className="mb-8">
+              <p className="text-base lg:text-lg font-roboto-slab text-[hsl(var(--theme-text))] whitespace-nowrap">
                 Web Development Enthusiast | Aspiring Software Developer
               </p>
             </div>
@@ -119,3 +120,4 @@ const HomePage = () => {
   );
 };
 export default HomePage;
+
