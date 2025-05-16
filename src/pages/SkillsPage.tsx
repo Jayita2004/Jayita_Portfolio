@@ -1,26 +1,42 @@
+
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import { PanelLeft, Database, Github, Figma, CodeXml as Html, Combine as Css } from "lucide-react"; // Changed html to Html (CodeXml), css to Css (Combine), kept others as PascalCase
+import {
+  Database,
+  Github,
+  Figma,
+  CodeXml as HtmlIcon, // Alias for HTML
+  Palette as CssIcon, // Alias for CSS
+  Cable as JavascriptIcon, // Alias for JavaScript
+  Shapes as ReactIcon, // Alias for React
+  Wind as TailwindIcon, // Alias for Tailwind CSS
+  Cog as NodejsIcon, // Alias for Node.js
+  Server as ExpressIcon, // Alias for Express.js
+  GitMerge as GitIcon, // Alias for Git
+  TerminalSquare as VscodeIcon, // Alias for VS Code
+  PanelLeft // Fallback or specific use
+} from "lucide-react";
 import { SkillCard } from "@/components/SkillCard";
 
 const skillsData = {
   frontend: [
-    { name: "HTML", level: 95, icon: Html }, 
-    { name: "CSS", level: 90, icon: Css }, 
-    { name: "JavaScript", level: 80, icon: PanelLeft }, // Kept PanelLeft, consider Brain or FileJson for JS
-    { name: "Tailwind CSS", level: 85, icon: Css }, 
+    { name: "HTML", level: 95, icon: HtmlIcon },
+    { name: "CSS", level: 90, icon: CssIcon },
+    { name: "JavaScript", level: 80, icon: JavascriptIcon },
+    { name: "React", level: 75, icon: ReactIcon }, // Added React
+    { name: "Tailwind CSS", level: 85, icon: TailwindIcon },
   ],
   backend: [
-    { name: "Node.js", level: 70, icon: PanelLeft }, // Consider Cog or Server for Node.js
-    { name: "Express.js (Learning)", level: 50, icon: PanelLeft },
+    { name: "Node.js", level: 70, icon: NodejsIcon },
+    { name: "Express.js (Learning)", level: 50, icon: ExpressIcon },
   ],
   database: [
     { name: "MySQL", level: 75, icon: Database },
   ],
   tools: [
-    { name: "Git", level: 85, icon: PanelLeft }, // Consider GitBranch or GitCommit
+    { name: "Git", level: 85, icon: GitIcon },
     { name: "GitHub", level: 85, icon: Github },
-    { name: "VS Code", level: 90, icon: PanelLeft }, // Consider Code2 or TerminalSquare
+    { name: "VS Code", level: 90, icon: VscodeIcon },
     { name: "Figma", level: 70, icon: Figma },
   ],
   professional: [
@@ -35,12 +51,10 @@ const skillsData = {
 const SkillsPage = () => {
   return (
     <div className="relative min-h-screen">
-      {/* Enhanced background with animated gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-cyan-800/10 to-purple-900/20 dark:from-blue-950/30 dark:via-cyan-950/30 dark:to-purple-950/40 z-0">
-        <div className="absolute inset-0 bg-[url('/assets/hex-pattern.svg')] opacity-15 dark:opacity-10"></div>
-      </div>
+      {/* Simplified background - relies on global body style now */}
+      {/* Removed specific gradient overlay and pattern SVG */}
       
-      {/* Background decoration elements */}
+      {/* Background decoration elements - kept these, ensure colors are theme-consistent */}
       <div className="absolute top-40 right-20 w-56 h-56 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 dark:from-cyan-700/5 dark:to-blue-700/5 rounded-full filter blur-3xl animate-pulse"></div>
       <div className="absolute bottom-20 left-10 w-64 h-64 bg-gradient-to-r from-violet-400/10 to-indigo-400/10 dark:from-violet-700/5 dark:to-indigo-700/5 rounded-full filter blur-3xl animate-pulse" style={{animationDuration: '7s', animationDelay: '2s'}}></div>
       
@@ -71,7 +85,7 @@ const SkillsPage = () => {
               <SkillCard 
                 title="Frontend" 
                 skills={skillsData.frontend}
-                icon={<Html size={24} />} // Changed to Html (CodeXml)
+                icon={<HtmlIcon size={24} />} 
                 delay={0.3}
               />
               
@@ -79,7 +93,7 @@ const SkillsPage = () => {
               <SkillCard 
                 title="Backend" 
                 skills={skillsData.backend}
-                icon={<PanelLeft size={24} />} // Consider Cog or Server
+                icon={<NodejsIcon size={24} />} 
                 delay={0.4}
               />
               

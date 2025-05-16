@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { School, Briefcase, Lightbulb, Sparkles, Github, Linkedin, Instagram } from "lucide-react"; 
+import { School, Briefcase, Sparkles, Github, Linkedin, Instagram } from "lucide-react"; 
 
 const AboutPage = () => {
   const sectionVariants = {
@@ -16,10 +16,8 @@ const AboutPage = () => {
 
   return (
     <div className="relative min-h-screen">
-      {/* Enhanced background with animated gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-blue-800/10 to-indigo-900/20 dark:from-purple-950/30 dark:via-blue-950/30 dark:to-indigo-950/40 z-0">
-        <div className="absolute inset-0 bg-[url('/assets/dots-pattern.svg')] opacity-20 dark:opacity-10"></div>
-      </div>
+      {/* Simplified background - relies on global body style now */}
+      {/* Removed specific gradient overlay and pattern SVG */}
       
       <div className="container-max section-padding relative z-10">
         <motion.h1 
@@ -32,7 +30,7 @@ const AboutPage = () => {
         </motion.h1>
 
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-start">
-          {/* Image Section - Updated with new image and styling */}
+          {/* Image Section - Kept existing style */}
           <motion.div
             className="lg:col-span-2 flex flex-col items-center justify-center p-6"
             variants={sectionVariants}
@@ -63,7 +61,7 @@ const AboutPage = () => {
             </div>
           </motion.div>
 
-          {/* Text Content - takes up 3 cols on lg screens */}
+          {/* Text Content */}
           <motion.div
             className="lg:col-span-3 space-y-8"
             variants={sectionVariants}
@@ -77,9 +75,6 @@ const AboutPage = () => {
               </h2>
               <p className="text-lg text-[hsl(var(--theme-text))] leading-relaxed text-justify">
                 A creative web developer merging intelligent design with modern technologies to build impactful digital experiences.
-              </p>
-              <p className="text-lg text-[hsl(var(--theme-text))] leading-relaxed text-justify">
-                From a young age, I've been captivated by the power of technology to transform ideas into reality. This fascination led me to pursue a career in software development, where I can combine my analytical skills with my passion for creating innovative solutions.
               </p>
             </div>
           </motion.div>

@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Brain, Code, Github, Linkedin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -44,12 +43,10 @@ const ProfileImagePlaceholder = () => (
 const HomePage = () => {
   return (
     <div className="relative min-h-screen">
-      {/* Enhanced background with animated gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-purple-800/20 to-blue-900/30 dark:from-indigo-950/40 dark:via-purple-950/40 dark:to-blue-950/50 z-0">
-        <div className="absolute inset-0 bg-[url('/assets/grid-pattern.svg')] opacity-20 dark:opacity-10"></div>
-      </div>
+      {/* Simplified background - relies on global body style now */}
+      {/* Removed specific gradient overlay and pattern SVG */}
       
-      {/* Animated shapes for background */}
+      {/* Animated shapes for background - kept these */}
       <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-r from-pink-400/20 to-purple-400/20 dark:from-pink-700/10 dark:to-purple-700/10 rounded-full filter blur-3xl animate-pulse"></div>
       <div className="absolute bottom-10 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 dark:from-blue-700/10 dark:to-cyan-700/10 rounded-full filter blur-3xl animate-pulse" style={{animationDuration: '8s', animationDelay: '1s'}}></div>
       
@@ -63,20 +60,20 @@ const HomePage = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="mb-4">
-              <h2 className="text-xl md:text-2xl font-medium text-white mb-1">Hello I'm</h2>
+              <h2 className="text-xl md:text-2xl font-medium text-[hsl(var(--theme-text))] mb-1">Hello I'm</h2> 
               <h1 className="text-4xl lg:text-5xl font-bold text-[hsl(var(--theme-primary))]">Jayita Maji</h1>
             </div>
-            <div className="h-8 mb-8">
+            <div className="h-8 mb-8"> {/* Ensure height accommodates text to prevent layout shift */}
               <TypeAnimation
                 sequence={[
                   'Web Developer',
-                  1000,
+                  2000, // Increased duration before switching
                   'Software Development Enthusiast',
-                  1000,
+                  2000, // Increased duration
                 ]}
                 wrapper="p"
                 speed={50}
-                style={{ fontSize: '1.25rem', display: 'inline-block' }}
+                cursor={true}
                 repeat={Infinity}
                 className="text-xl lg:text-2xl text-[hsl(var(--theme-text))]"
               />
