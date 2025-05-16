@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Brain, Code, Github, Linkedin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { TypeAnimation } from 'react-type-animation';
 
 // Updated ProfileImagePlaceholder
 const ProfileImagePlaceholder = () => (
@@ -15,7 +14,7 @@ const ProfileImagePlaceholder = () => (
       }}
     >
       <img 
-        src="/lovable-uploads/ff8a9855-7794-44e9-a1f5-9518d40d877c.png" 
+        src="/lovable-uploads/9d8c32b6-32bb-4be0-b118-662b94b3977b.png" 
         alt="Jayita Maji" 
         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
         style={{ borderRadius: 'inherit' }} 
@@ -63,20 +62,10 @@ const HomePage = () => {
               <h2 className="text-xl md:text-2xl font-medium text-[hsl(var(--theme-text))] mb-1">Hello I'm</h2> 
               <h1 className="text-4xl lg:text-5xl font-bold text-[hsl(var(--theme-primary))]">Jayita Maji</h1>
             </div>
-            <div className="h-8 mb-8"> {/* Ensure height accommodates text to prevent layout shift */}
-              <TypeAnimation
-                sequence={[
-                  'Web Developer',
-                  2000, // Increased duration before switching
-                  'Software Development Enthusiast',
-                  2000, // Increased duration
-                ]}
-                wrapper="p"
-                speed={50}
-                cursor={true}
-                repeat={Infinity}
-                className="text-xl lg:text-2xl text-[hsl(var(--theme-text))]"
-              />
+            <div className="mb-8"> {/* Adjusted wrapper for static text */}
+              <p className="text-xl lg:text-2xl text-[hsl(var(--theme-text))]">
+                Web Development Enthusiast | Aspiring Software Developer
+              </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button asChild size="lg" className="bg-[hsl(var(--theme-primary))] text-[hsl(var(--primary-foreground))] hover:bg-[hsl(var(--theme-accent))] transition-all duration-300 group">
