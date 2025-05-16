@@ -1,6 +1,5 @@
-
 import { motion } from "framer-motion";
-import { School, Briefcase, Lightbulb, Sparkles } from "lucide-react"; 
+import { School, Briefcase, Lightbulb, Sparkles, github, linkedin, instagram } from "lucide-react"; 
 
 const AboutPage = () => {
   const sectionVariants = {
@@ -53,13 +52,13 @@ const AboutPage = () => {
             </div>
             <div className="flex items-center justify-center mt-8 space-x-4">
               <a href="https://github.com/Jayita2004" target="_blank" rel="noopener noreferrer" className="p-3 bg-[hsla(var(--theme-bg-start),0.5)] backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-transform hover:scale-110">
-                <Github className="h-6 w-6 text-[hsl(var(--theme-primary))]" />
+                <github className="h-6 w-6 text-[hsl(var(--theme-primary))]" />
               </a>
               <a href="https://www.linkedin.com/in/jayita-maji-56a221303" target="_blank" rel="noopener noreferrer" className="p-3 bg-[hsla(var(--theme-bg-start),0.5)] backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-transform hover:scale-110">
-                <Linkedin className="h-6 w-6 text-[hsl(var(--theme-primary))]" />
+                <linkedin className="h-6 w-6 text-[hsl(var(--theme-primary))]" />
               </a>
               <a href="https://www.instagram.com/ms10__.4" target="_blank" rel="noopener noreferrer" className="p-3 bg-[hsla(var(--theme-bg-start),0.5)] backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-transform hover:scale-110">
-                <Instagram className="h-6 w-6 text-[hsl(var(--theme-primary))]" />
+                <instagram className="h-6 w-6 text-[hsl(var(--theme-primary))]" />
               </a>
             </div>
           </motion.div>

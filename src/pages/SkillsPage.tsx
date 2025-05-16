@@ -1,15 +1,15 @@
 
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import { Html, Css, PanelLeft, Database, Github, Figma } from "lucide-react";
+import { html, css, PanelLeft, Database, Github, Figma } from "lucide-react"; // Changed Html to html, Css to css
 import { SkillCard } from "@/components/SkillCard";
 
 const skillsData = {
   frontend: [
-    { name: "HTML", level: 95, icon: Html },
-    { name: "CSS", level: 90, icon: Css },
+    { name: "HTML", level: 95, icon: html }, // Changed Html to html
+    { name: "CSS", level: 90, icon: css }, // Changed Css to css
     { name: "JavaScript", level: 80, icon: PanelLeft },
-    { name: "Tailwind CSS", level: 85, icon: Css },
+    { name: "Tailwind CSS", level: 85, icon: css }, // Changed Css to css
   ],
   backend: [
     { name: "Node.js", level: 70, icon: PanelLeft },
@@ -72,7 +72,7 @@ const SkillsPage = () => {
               <SkillCard 
                 title="Frontend" 
                 skills={skillsData.frontend}
-                icon={<Html size={24} />}
+                icon={<html size={24} />} 
                 delay={0.3}
               />
               
