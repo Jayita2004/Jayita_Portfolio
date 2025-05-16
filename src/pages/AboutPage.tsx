@@ -17,7 +17,6 @@ const AboutPage = () => {
   return (
     <div className="relative min-h-screen">
       {/* Simplified background - relies on global body style now */}
-      {/* Removed specific gradient overlay and pattern SVG */}
       
       <div className="container-max section-padding relative z-10">
         <motion.h1 
@@ -61,7 +60,7 @@ const AboutPage = () => {
             </div>
           </motion.div>
 
-          {/* Text Content */}
+          {/* Text Content - The box requested for removal was here. */}
           <motion.div
             className="lg:col-span-3 space-y-8"
             variants={sectionVariants}
@@ -69,14 +68,10 @@ const AboutPage = () => {
             animate="visible"
             custom={1}
           >
-            <div className="bg-[hsla(var(--theme-bg-start),0.3)] p-6 sm:p-8 rounded-xl shadow-lg backdrop-blur-sm space-y-4 border border-[hsl(var(--border)/0.1)]">
-              <h2 className="flex items-center text-2xl sm:text-3xl font-bold text-[hsl(var(--theme-primary))] mb-3">
-                <Sparkles className="mr-3 h-7 w-7" />
-              </h2>
-              <p className="text-lg text-[hsl(var(--theme-text))] leading-relaxed text-justify">
-                A creative web developer merging intelligent design with modern technologies to build impactful digital experiences.
-              </p>
-            </div>
+            {/* The box containing "A creative web developer..." has been removed. */}
+            {/* You can add new content here if needed, or leave it empty if this section is no longer required. */}
+            {/* For example, if there was other introductory text you wanted to keep or add, it would go here. */}
+            {/* If this 'motion.div' is now empty and not needed, it could also be removed, but for now, we are just removing the inner box. */}
           </motion.div>
         </div>
 
