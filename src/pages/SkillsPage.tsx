@@ -4,40 +4,45 @@ import { Badge } from "@/components/ui/badge";
 import {
   Database,
   Github,
-  Figma,
-  CodeXml as HtmlIcon, // Alias for HTML
-  Palette as CssIcon, // Alias for CSS
-  Cable as JavascriptIcon, // Alias for JavaScript
-  Shapes as ReactIcon, // Alias for React
-  Wind as TailwindIcon, // Alias for Tailwind CSS
-  Cog as NodejsIcon, // Alias for Node.js
-  Server as ExpressIcon, // Alias for Express.js
-  GitMerge as GitIcon, // Alias for Git
-  TerminalSquare as VscodeIcon, // Alias for VS Code
-  PanelLeft // Fallback or specific use
+  Code2,
+  Palette,
+  Server,
+  GitBranch,
+  Terminal,
+  Layers,
+  Brain,
+  Shield
 } from "lucide-react";
 import { SkillCard } from "@/components/SkillCard";
 
 const skillsData = {
-  frontend: [
-    { name: "HTML", level: 95, icon: HtmlIcon },
-    { name: "CSS", level: 90, icon: CssIcon },
-    { name: "JavaScript", level: 80, icon: JavascriptIcon },
-    { name: "React", level: 75, icon: ReactIcon }, // Added React
-    { name: "Tailwind CSS", level: 85, icon: TailwindIcon },
+  programming: [
+    { name: "C", level: 85, icon: Code2 },
+    { name: "Python", level: 80, icon: Code2 },
+    { name: "Java", level: 75, icon: Code2 },
   ],
-  backend: [
-    { name: "Node.js", level: 70, icon: NodejsIcon },
-    { name: "Express.js (Learning)", level: 50, icon: ExpressIcon },
+  webTech: [
+    { name: "HTML", level: 95, icon: Code2 },
+    { name: "CSS", level: 90, icon: Palette },
+    { name: "Tailwind CSS", level: 85, icon: Palette },
+    { name: "React", level: 80, icon: Layers },
+    { name: "JavaScript", level: 85, icon: Code2 },
   ],
   database: [
     { name: "MySQL", level: 75, icon: Database },
   ],
   tools: [
-    { name: "Git", level: 85, icon: GitIcon },
+    { name: "Git", level: 85, icon: GitBranch },
     { name: "GitHub", level: 85, icon: Github },
-    { name: "VS Code", level: 90, icon: VscodeIcon },
-    { name: "Figma", level: 70, icon: Figma },
+    { name: "VS Code", level: 90, icon: Terminal },
+  ],
+  concepts: [
+    "Data Structures & Algorithms",
+    "Database Management Systems",
+    "Object-Oriented Programming",
+    "Computer Networks",
+    "Web Development",
+    "Cybersecurity Fundamentals"
   ],
   professional: [
     "Problem Solving",
@@ -45,93 +50,123 @@ const skillsData = {
     "Communication",
     "Adaptability",
     "Attention to Detail",
+    "Project Management"
   ]
 };
 
 const SkillsPage = () => {
   return (
     <div className="relative min-h-screen">
-      {/* Simplified background - relies on global body style now */}
-      {/* Removed specific gradient overlay and pattern SVG */}
-      
-      {/* Background decoration elements - kept these, ensure colors are theme-consistent */}
-      <div className="absolute top-40 right-20 w-56 h-56 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 dark:from-cyan-700/5 dark:to-blue-700/5 rounded-full filter blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 left-10 w-64 h-64 bg-gradient-to-r from-violet-400/10 to-indigo-400/10 dark:from-violet-700/5 dark:to-indigo-700/5 rounded-full filter blur-3xl animate-pulse" style={{animationDuration: '7s', animationDelay: '2s'}}></div>
+      {/* Enhanced background with floating elements */}
+      <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-purple-400/20 dark:from-blue-600/10 dark:to-purple-600/10 rounded-full filter blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-r from-cyan-400/20 to-teal-400/20 dark:from-cyan-600/10 dark:to-teal-600/10 rounded-full filter blur-3xl animate-pulse" style={{animationDuration: '7s', animationDelay: '2s'}}></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-indigo-400/15 to-pink-400/15 dark:from-indigo-600/8 dark:to-pink-600/8 rounded-full filter blur-3xl animate-pulse" style={{animationDuration: '10s', animationDelay: '4s'}}></div>
       
       <div className="container-max section-padding relative z-10">
-        <motion.h1 
-          className="text-4xl font-bold mb-12 text-center text-[hsl(var(--theme-primary))]"
+        <motion.div
+          className="text-center mb-16"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Skills & <span className="text-[hsl(var(--theme-accent))]">Expertise</span>
-        </motion.h1>
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-[hsl(var(--theme-primary))] to-[hsl(var(--theme-accent))] bg-clip-text text-transparent">
+            Skills & Expertise
+          </h1>
+          <p className="text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
+            A comprehensive overview of my technical skills and professional competencies
+          </p>
+        </motion.div>
         
-        <div className="space-y-16">
-          {/* Technical Skills Section */}
+        <div className="space-y-20">
+          {/* Programming Languages */}
           <div className="space-y-8">
             <motion.h2 
-              className="text-2xl font-semibold text-center text-[hsl(var(--theme-text))] mb-8"
+              className="text-3xl font-semibold text-center text-[hsl(var(--theme-text))] mb-12"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              Technical Skills
+              Programming Languages
             </motion.h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Frontend Skills */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <SkillCard 
-                title="Frontend" 
-                skills={skillsData.frontend}
-                icon={<HtmlIcon size={24} />} 
+                title="Programming Languages" 
+                skills={skillsData.programming}
+                icon={<Code2 size={28} />} 
                 delay={0.3}
               />
               
-              {/* Backend Skills */}
               <SkillCard 
-                title="Backend" 
-                skills={skillsData.backend}
-                icon={<NodejsIcon size={24} />} 
+                title="Web Technologies" 
+                skills={skillsData.webTech}
+                icon={<Palette size={28} />} 
                 delay={0.4}
               />
               
-              {/* Database Skills */}
               <SkillCard 
-                title="Database" 
-                skills={skillsData.database}
-                icon={<Database size={24} />}
+                title="Database & Tools" 
+                skills={[...skillsData.database, ...skillsData.tools]}
+                icon={<Database size={28} />}
                 delay={0.5}
-              />
-              
-              {/* Tools & Platforms */}
-              <SkillCard 
-                title="Tools & Platforms" 
-                skills={skillsData.tools}
-                icon={<Github size={24} />}
-                delay={0.6}
               />
             </div>
           </div>
           
-          {/* Professional Skills Section */}
+          {/* Core Concepts */}
           <motion.div
-            className="bg-[hsla(var(--theme-bg-start),0.3)] p-8 rounded-xl shadow-lg backdrop-blur-sm border border-[hsl(var(--border)/0.1)]"
+            className="bg-gradient-to-br from-[hsla(var(--theme-primary),0.1)] to-[hsla(var(--theme-accent),0.05)] p-10 rounded-2xl shadow-xl backdrop-blur-sm border border-[hsl(var(--border)/0.2)]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.7 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <h2 className="text-2xl font-semibold mb-6 text-[hsl(var(--theme-text))]">Professional Skills</h2>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex items-center justify-center mb-8">
+              <Brain className="h-10 w-10 text-[hsl(var(--theme-primary))] mr-4" />
+              <h2 className="text-3xl font-semibold text-[hsl(var(--theme-text))]">Core Concepts</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {skillsData.concepts.map((concept, index) => (
+                <motion.div
+                  key={concept}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: 0.7 + index * 0.1 }}
+                  className="group"
+                >
+                  <div className="bg-white/60 dark:bg-black/30 backdrop-blur-sm p-4 rounded-lg border border-[hsl(var(--border))] hover:border-[hsl(var(--theme-primary))] transition-all duration-300 hover:shadow-lg hover:scale-105">
+                    <div className="flex items-center">
+                      <Shield className="h-5 w-5 text-[hsl(var(--theme-accent))] mr-3 group-hover:text-[hsl(var(--theme-primary))] transition-colors" />
+                      <span className="font-medium text-[hsl(var(--theme-text))]">{concept}</span>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+          
+          {/* Professional Skills */}
+          <motion.div
+            className="bg-gradient-to-br from-[hsla(var(--theme-secondary),0.1)] to-[hsla(var(--theme-primary),0.05)] p-10 rounded-2xl shadow-xl backdrop-blur-sm border border-[hsl(var(--border)/0.2)]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+          >
+            <div className="flex items-center justify-center mb-8">
+              <Server className="h-10 w-10 text-[hsl(var(--theme-primary))] mr-4" />
+              <h2 className="text-3xl font-semibold text-[hsl(var(--theme-text))]">Professional Skills</h2>
+            </div>
+            <div className="flex flex-wrap gap-4 justify-center">
               {skillsData.professional.map((skill, index) => (
                 <motion.div
                   key={skill}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: 0.8 + index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.9 + index * 0.1 }}
                 >
-                  <Badge variant="secondary" className="text-base py-1.5 px-4 bg-[hsla(var(--theme-secondary),0.3)] hover:bg-[hsla(var(--theme-secondary),0.5)] transition-colors">
+                  <Badge 
+                    variant="secondary" 
+                    className="text-lg py-3 px-6 bg-gradient-to-r from-[hsla(var(--theme-primary),0.2)] to-[hsla(var(--theme-accent),0.2)] hover:from-[hsla(var(--theme-primary),0.3)] hover:to-[hsla(var(--theme-accent),0.3)] transition-all duration-300 border border-[hsl(var(--theme-primary)/0.3)] hover:border-[hsl(var(--theme-primary))] hover:scale-105 font-medium"
+                  >
                     {skill}
                   </Badge>
                 </motion.div>

@@ -1,10 +1,11 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Light Theme - Blue focused with deeper accents */
+    /* Enhanced Light Theme - More vibrant and interesting */
     --background: 210 40% 98%; /* Very light blue-gray */
     --foreground: 222.2 84% 4.9%; /* Dark blue for text */
 
@@ -14,73 +15,73 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 210 85% 45%; /* Brighter blue */
+    --primary: 220 90% 50%; /* More vibrant blue */
     --primary-foreground: 210 40% 98%; /* White text on primary */
 
-    --secondary: 210 40% 90%; /* Lighter blue */
+    --secondary: 200 80% 85%; /* Brighter light blue */
     --secondary-foreground: 222.2 47.4% 11.2%; /* Dark blue text on secondary */
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 195 90% 40%; /* Vibrant cyan-blue for accents */
+    --accent: 280 90% 60%; /* Vibrant purple accent */
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 200 50% 85%; /* Light blue border */
-    --input: 200 50% 90%; /* Light blue input bg */
-    --ring: 210 85% 45%; /* Bright blue ring */
+    --border: 200 50% 88%; /* Softer blue border */
+    --input: 200 60% 92%; /* Brighter blue input bg */
+    --ring: 220 90% 50%; /* Vibrant blue ring */
 
     --radius: 0.75rem;
 
-    /* Custom theme specific variables - Light Theme */
-    --theme-primary: 210 85% 45%; 
-    --theme-secondary: 195 85% 55%; 
-    --theme-accent: 250 85% 65%; 
-    --theme-text: 220 30% 20%; 
-    --theme-bg-start: 195 90% 85%; /* Lighter cyan-blue */
-    --theme-bg-end: 210 90% 95%;   /* Very light blue */
+    /* Enhanced theme specific variables - Light Theme */
+    --theme-primary: 220 90% 50%; /* Vibrant blue */
+    --theme-secondary: 200 85% 60%; /* Bright cyan-blue */
+    --theme-accent: 280 85% 65%; /* Vibrant purple */
+    --theme-text: 220 40% 15%; /* Darker for better contrast */
+    --theme-bg-start: 200 100% 92%; /* Brighter cyan-blue */
+    --theme-bg-end: 240 100% 96%;   /* Light purple-blue */
   }
 
   .dark {
-    /* Dark Theme - "Black Theme" Focus */
-    --background: 220 15% 8%; /* Very dark desaturated blue, almost black */
-    --foreground: 210 30% 92%; /* Light gray/white text */
+    /* Enhanced Dark Theme - "Black Theme" Focus with better contrast */
+    --background: 220 20% 6%; /* Deeper dark */
+    --foreground: 210 35% 95%; /* Brighter text */
 
-    --card: 220 15% 12%; /* Slightly lighter than background for cards */
-    --card-foreground: 210 30% 92%;
+    --card: 220 20% 10%; /* Slightly lighter than background for cards */
+    --card-foreground: 210 35% 95%;
 
-    --popover: 220 15% 10%; /* Darker popover */
-    --popover-foreground: 210 30% 92%;
+    --popover: 220 20% 8%; /* Darker popover */
+    --popover-foreground: 210 35% 95%;
 
-    --primary: 210 80% 60%; /* A noticeable blue, but not overly bright */
-    --primary-foreground: 220 15% 15%; /* Dark text on primary */
+    --primary: 220 85% 65%; /* Brighter blue */
+    --primary-foreground: 220 20% 10%; /* Dark text on primary */
 
-    --secondary: 220 15% 18%; /* Darker secondary */
-    --secondary-foreground: 210 30% 85%; /* Lighter text on secondary */
+    --secondary: 220 20% 15%; /* Darker secondary */
+    --secondary-foreground: 210 35% 90%; /* Lighter text on secondary */
 
-    --muted: 220 10% 15%;
-    --muted-foreground: 210 20% 60%;
+    --muted: 220 15% 12%;
+    --muted-foreground: 210 25% 65%;
 
-    --accent: 260 70% 60%; /* A deep purple accent */
-    --accent-foreground: 210 30% 95%; 
+    --accent: 280 75% 70%; /* Brighter purple accent */
+    --accent-foreground: 220 20% 10%; 
 
-    --destructive: 0 70% 45%;
+    --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 10% 20%; /* Dark border */
-    --input: 220 10% 18%; /* Dark input bg */
-    --ring: 210 80% 55%; /* Ring color that stands out on dark bg */
+    --border: 220 15% 18%; /* Lighter border for better visibility */
+    --input: 220 15% 15%; /* Dark input bg */
+    --ring: 220 85% 60%; /* Brighter ring color */
 
-    /* Custom theme specific variables - "Black Theme" */
-    --theme-primary: 210 80% 60%;   
-    --theme-secondary: 260 70% 55%; /* Deep purple secondary */
-    --theme-accent: 280 70% 60%; /* Another violet/purple accent */    
-    --theme-text: 210 30% 92%;      
-    --theme-bg-start: 220 20% 6%;  /* Very dark, almost black */
-    --theme-bg-end: 230 20% 10%;    /* Darker gradient end */
+    /* Enhanced theme specific variables - "Black Theme" */
+    --theme-primary: 220 85% 65%;   /* Brighter blue */
+    --theme-secondary: 280 75% 65%; /* Brighter purple secondary */
+    --theme-accent: 300 80% 70%; /* Vibrant magenta accent */    
+    --theme-text: 210 35% 95%;      /* Brighter text */
+    --theme-bg-start: 220 25% 4%;  /* Deeper black */
+    --theme-bg-end: 240 25% 8%;    /* Dark gradient end */
   }
 }
 
@@ -94,54 +95,90 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-[hsl(var(--theme-bg-start))] to-[hsl(var(--theme-bg-end))] text-foreground font-sans transition-colors duration-500;
+    @apply bg-gradient-to-br from-[hsl(var(--theme-bg-start))] via-[hsl(var(--background))] to-[hsl(var(--theme-bg-end))] text-foreground font-sans transition-colors duration-500;
     min-height: 100vh;
+    background-attachment: fixed;
   }
 
+  /* Enhanced typography */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading text-[hsl(var(--theme-text))];
-  }
-  p, span, li, a, label, input, textarea, button {
-     @apply text-[hsl(var(--theme-text))]; /* Ensures base text color uses theme variable */
+    @apply font-heading text-[hsl(var(--theme-text))] font-bold;
   }
   
-  /* Ensure buttons from shadcn/ui also use theme text color correctly if needed */
-  .shadcn-button { 
-    @apply text-[hsl(var(--primary-foreground))];
+  p, span, li, a, label, input, textarea, button {
+     @apply text-[hsl(var(--theme-text))];
   }
-  .dark .shadcn-button {
-     @apply text-[hsl(var(--primary-foreground))];
+  
+  /* Enhanced selection colors */
+  ::selection {
+    background: linear-gradient(45deg, hsl(var(--theme-primary)), hsl(var(--theme-accent)));
+    color: hsl(var(--primary-foreground));
   }
 
-  ::selection {
-    background-color: hsl(var(--theme-accent));
-    color: hsl(var(--primary-foreground));
+  /* Enhanced scrollbar for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, hsl(var(--theme-primary)), hsl(var(--theme-accent)));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--theme-accent));
   }
 }
 
 @layer components {
   .section-padding {
-    @apply py-16 px-4 sm:px-6 lg:px-8;
+    @apply py-20 px-4 sm:px-6 lg:px-8;
   }
   .container-max {
     @apply max-w-7xl mx-auto;
   }
   
-  /* Added glassmorphism utility classes */
+  /* Enhanced glassmorphism utility classes */
   .glass-card {
-    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-xl;
+    @apply bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl shadow-2xl;
   }
   
   .dark .glass-card {
-    @apply bg-black/20 backdrop-blur-md border border-white/10 rounded-xl;
+    @apply bg-black/30 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl;
   }
   
-  /* Added animation utility classes */
+  /* Enhanced animation utility classes */
   .hover-scale {
-    @apply transition-transform hover:scale-105 duration-300;
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
   }
   
   .hover-glow {
-    @apply transition-shadow hover:shadow-lg hover:shadow-[hsl(var(--theme-primary)/0.4)] duration-300;
+    @apply transition-all duration-300 hover:shadow-2xl hover:shadow-[hsl(var(--theme-primary)/0.4)];
+  }
+
+  /* New utility classes for enhanced effects */
+  .gradient-text {
+    @apply bg-gradient-to-r from-[hsl(var(--theme-primary))] to-[hsl(var(--theme-accent))] bg-clip-text text-transparent;
+  }
+
+  .gradient-border {
+    position: relative;
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(45deg, hsl(var(--theme-primary)), hsl(var(--theme-accent)));
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: subtract;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
   }
 }
