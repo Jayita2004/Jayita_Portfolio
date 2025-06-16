@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Calendar, Users, Shield, Globe, User, Palette } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -15,7 +16,7 @@ const projects = [
     link: "#",
     github: "#",
     icon: Shield,
-    image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
   },
   {
     title: "Student Welfare Portal",
@@ -27,7 +28,7 @@ const projects = [
     link: "#",
     github: "#",
     icon: Users,
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
   }
 ];
 
@@ -91,7 +92,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button size="sm" variant="outline" className="bg-black/30 hover:bg-black/50 text-white border-white/30 shadow-lg text-sm">
-                  💻 Source Code
+                  Source Code
                 </Button>
               </TooltipTrigger>
               <TooltipContent>GitHub Repository</TooltipContent>
@@ -187,9 +188,11 @@ const PortfolioPage = () => {
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
             I'm always excited to work on new projects and collaborate with innovative teams. Let's build something incredible together!
           </p>
-          <Button size="lg" className="btn-primary text-lg px-8 py-4">
-            Let's Collaborate
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" className="btn-primary text-lg px-8 py-4">
+              Let's Collaborate
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </div>

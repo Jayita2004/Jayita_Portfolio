@@ -41,8 +41,7 @@ const skillsData = {
     "Database Management Systems",
     "Object-Oriented Programming",
     "Computer Networks",
-    "Web Development",
-    "Cybersecurity Fundamentals"
+    "Web Development"
   ],
   professional: [
     "Problem Solving",

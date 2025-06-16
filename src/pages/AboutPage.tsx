@@ -40,7 +40,7 @@ const AboutPage = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-[hsl(var(--theme-primary))] to-[hsl(var(--theme-accent))] rounded-2xl blur-md opacity-75 group-hover:opacity-100 transition duration-200"></div>
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/lovable-uploads/895dad0c-bf3c-4c78-9c43-4336817e1ea8.png" 
+                  src="/lovable-uploads/ece3dce8-ddef-44b2-ba44-1c2e05361553.png" 
                   alt="Jayita Maji" 
                   className="w-full h-full object-cover"
                 />
