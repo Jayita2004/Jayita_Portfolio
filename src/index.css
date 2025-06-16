@@ -5,9 +5,9 @@
 
 @layer base {
   :root {
-    /* Enhanced Light Theme - More vibrant and interesting */
-    --background: 210 40% 98%; /* Very light blue-gray */
-    --foreground: 222.2 84% 4.9%; /* Dark blue for text */
+    /* Beautiful Light Theme - Soothing blue gradient */
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -15,73 +15,73 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 220 90% 50%; /* More vibrant blue */
-    --primary-foreground: 210 40% 98%; /* White text on primary */
+    --primary: 59 130% 50%; /* Vibrant blue #3B82F6 */
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 200 80% 85%; /* Brighter light blue */
-    --secondary-foreground: 222.2 47.4% 11.2%; /* Dark blue text on secondary */
+    --secondary: 200 85% 92%; /* Light blue */
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 280 90% 60%; /* Vibrant purple accent */
+    --accent: 221 83% 53%; /* Blue accent #3B82F6 */
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 200 50% 88%; /* Softer blue border */
-    --input: 200 60% 92%; /* Brighter blue input bg */
-    --ring: 220 90% 50%; /* Vibrant blue ring */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
 
     --radius: 0.75rem;
 
-    /* Enhanced theme specific variables - Light Theme */
-    --theme-primary: 220 90% 50%; /* Vibrant blue */
-    --theme-secondary: 200 85% 60%; /* Bright cyan-blue */
-    --theme-accent: 280 85% 65%; /* Vibrant purple */
-    --theme-text: 220 40% 15%; /* Darker for better contrast */
-    --theme-bg-start: 200 100% 92%; /* Brighter cyan-blue */
-    --theme-bg-end: 240 100% 96%;   /* Light purple-blue */
+    /* Theme specific variables - Light */
+    --theme-primary: 221 83% 53%; /* #3B82F6 */
+    --theme-secondary: 200 85% 85%;
+    --theme-accent: 234 89% 74%; /* #60A5FA */
+    --theme-text: 222.2 84% 4.9%;
+    --theme-bg-start: 210 100% 97%; /* #e3f2fd */
+    --theme-bg-end: 0 0% 100%; /* white */
   }
 
   .dark {
-    /* Enhanced Dark Theme - "Black Theme" Focus with better contrast */
-    --background: 220 20% 6%; /* Deeper dark */
-    --foreground: 210 35% 95%; /* Brighter text */
+    /* Impressive Dark Theme - Modern blue-accented */
+    --background: 222.2 84% 4.9%; /* #0f172a */
+    --foreground: 210 40% 98%;
 
-    --card: 220 20% 10%; /* Slightly lighter than background for cards */
-    --card-foreground: 210 35% 95%;
+    --card: 217.2 32.6% 17.5%; /* #1e293b */
+    --card-foreground: 210 40% 98%;
 
-    --popover: 220 20% 8%; /* Darker popover */
-    --popover-foreground: 210 35% 95%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 220 85% 65%; /* Brighter blue */
-    --primary-foreground: 220 20% 10%; /* Dark text on primary */
+    --primary: 217.2 91.2% 59.8%; /* #3B82F6 */
+    --primary-foreground: 222.2 84% 4.9%;
 
-    --secondary: 220 20% 15%; /* Darker secondary */
-    --secondary-foreground: 210 35% 90%; /* Lighter text on secondary */
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 220 15% 12%;
-    --muted-foreground: 210 25% 65%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 280 75% 70%; /* Brighter purple accent */
-    --accent-foreground: 220 20% 10%; 
+    --accent: 217.2 91.2% 59.8%;
+    --accent-foreground: 222.2 84% 4.9%;
 
-    --destructive: 0 70% 50%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 18%; /* Lighter border for better visibility */
-    --input: 220 15% 15%; /* Dark input bg */
-    --ring: 220 85% 60%; /* Brighter ring color */
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.0%;
 
-    /* Enhanced theme specific variables - "Black Theme" */
-    --theme-primary: 220 85% 65%;   /* Brighter blue */
-    --theme-secondary: 280 75% 65%; /* Brighter purple secondary */
-    --theme-accent: 300 80% 70%; /* Vibrant magenta accent */    
-    --theme-text: 210 35% 95%;      /* Brighter text */
-    --theme-bg-start: 220 25% 4%;  /* Deeper black */
-    --theme-bg-end: 240 25% 8%;    /* Dark gradient end */
+    /* Theme specific variables - Dark */
+    --theme-primary: 217.2 91.2% 59.8%; /* #3B82F6 */
+    --theme-secondary: 234 89% 74%; /* #60A5FA */
+    --theme-accent: 249 95% 75%; /* #8b5cf6 */
+    --theme-text: 210 40% 98%; /* #f9fafb */
+    --theme-bg-start: 222.2 84% 4.9%; /* #0f172a */
+    --theme-bg-end: 217.2 32.6% 17.5%; /* #1e293b */
   }
 }
 
@@ -95,12 +95,17 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-[hsl(var(--theme-bg-start))] via-[hsl(var(--background))] to-[hsl(var(--theme-bg-end))] text-foreground font-sans transition-colors duration-500;
+    @apply text-foreground font-sans transition-colors duration-500;
     min-height: 100vh;
+    background: radial-gradient(circle at top left, hsl(var(--theme-bg-start)), hsl(var(--theme-bg-end)));
     background-attachment: fixed;
   }
 
-  /* Enhanced typography */
+  .dark body {
+    background: linear-gradient(135deg, hsl(var(--theme-bg-start)), hsl(var(--theme-bg-end)));
+  }
+
+  /* Typography */
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading text-[hsl(var(--theme-text))] font-bold;
   }
@@ -108,14 +113,14 @@
   p, span, li, a, label, input, textarea, button {
      @apply text-[hsl(var(--theme-text))];
   }
-  
-  /* Enhanced selection colors */
+
+  /* Selection colors */
   ::selection {
-    background: linear-gradient(45deg, hsl(var(--theme-primary)), hsl(var(--theme-accent)));
-    color: hsl(var(--primary-foreground));
+    background: hsl(var(--theme-primary) / 0.3);
+    color: hsl(var(--theme-text));
   }
 
-  /* Enhanced scrollbar for webkit browsers */
+  /* Scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -125,7 +130,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, hsl(var(--theme-primary)), hsl(var(--theme-accent)));
+    background: hsl(var(--theme-primary));
     border-radius: 4px;
   }
 
@@ -142,16 +147,16 @@
     @apply max-w-7xl mx-auto;
   }
   
-  /* Enhanced glassmorphism utility classes */
+  /* Glassmorphism utility classes */
   .glass-card {
-    @apply bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl shadow-2xl;
+    @apply bg-white/30 backdrop-blur-xl border border-white/20 rounded-2xl shadow-lg;
   }
   
   .dark .glass-card {
-    @apply bg-black/30 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl;
+    @apply bg-black/20 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl;
   }
   
-  /* Enhanced animation utility classes */
+  /* Animation utility classes */
   .hover-scale {
     @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
   }
@@ -160,25 +165,17 @@
     @apply transition-all duration-300 hover:shadow-2xl hover:shadow-[hsl(var(--theme-primary)/0.4)];
   }
 
-  /* New utility classes for enhanced effects */
+  /* Gradient text */
   .gradient-text {
     @apply bg-gradient-to-r from-[hsl(var(--theme-primary))] to-[hsl(var(--theme-accent))] bg-clip-text text-transparent;
   }
 
-  .gradient-border {
-    position: relative;
+  /* Button styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-[hsl(var(--theme-primary))] to-[hsl(var(--theme-accent))] text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
   }
 
-  .gradient-border::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    padding: 2px;
-    background: linear-gradient(45deg, hsl(var(--theme-primary)), hsl(var(--theme-accent)));
-    border-radius: inherit;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: subtract;
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: destination-out;
+  .dark .btn-primary {
+    @apply shadow-[0_4px_20px_hsl(var(--theme-primary)/0.4)] hover:shadow-[0_8px_25px_hsl(var(--theme-primary)/0.6)];
   }
 }

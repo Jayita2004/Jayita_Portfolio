@@ -1,14 +1,15 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Calendar, Users, Shield, Globe } from "lucide-react";
+import { ExternalLink, Github, Calendar, Users, Shield, Globe, User, Palette } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 const projects = [
   {
     title: "Fact-Checker Website",
-    description: "Developed a Flask web application that ingests news URLs, extracts claims and cross-verifies them against trusted fact-checking APIs. Features misinformation flagging with confidence scores and displays verified sources. Deployed on Heroku with MySQL backend and CI/CD pipeline via GitHub Actions.",
+    description: "Developed a comprehensive Flask web application that ingests news URLs, extracts claims and cross-verifies them against trusted fact-checking APIs. Features intelligent misinformation flagging with confidence scores and displays verified sources for enhanced credibility.",
     technologies: ["Python", "Flask", "BeautifulSoup", "Fact-Check API", "MySQL", "Heroku", "GitHub Actions"],
-    role: "Full Stack Developer",
+    role: "👨‍💻 Full Stack Developer",
     timeline: "Feb 2025 - Present",
     status: "In Progress",
     link: "#",
@@ -18,9 +19,9 @@ const projects = [
   },
   {
     title: "Student Welfare Portal",
-    description: "Built an initial prototype featuring key modules including campus navigation map, student marketplace, and creativity showcase. Developed a comprehensive hostel leave management system to streamline leave requests and ensure transparent communication with administration.",
+    description: "Built a comprehensive prototype featuring essential modules including interactive campus navigation map, student marketplace for peer-to-peer transactions, and creativity showcase platform. Developed an efficient hostel leave management system to streamline requests and ensure transparent administration communication.",
     technologies: ["HTML", "React", "TypeScript", "Vite"],
-    role: "Frontend Developer",
+    role: "🧑‍🎨 Frontend Developer", 
     timeline: "April 2025",
     status: "Completed",
     link: "#",
@@ -35,17 +36,16 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
   
   return (
     <motion.div 
-      className="group relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500"
+      className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover-scale"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 + index * 0.2 }}
-      whileHover={{ y: -10, scale: 1.02 }}
     >
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[hsla(var(--theme-primary),0.1)] to-[hsla(var(--theme-accent),0.1)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-purple-400/10 dark:from-blue-600/20 dark:to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       
       {/* Card content */}
-      <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border border-[hsl(var(--border)/0.3)] rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-500 group-hover:border-[hsl(var(--theme-accent))] group-hover:bg-white/90 dark:group-hover:bg-gray-900/90">
+      <div className="glass-card flex flex-col h-full transition-all duration-500 group-hover:border-[hsl(var(--theme-primary))] overflow-hidden">
         
         {/* Image and Status Section */}
         <div className="relative h-56 overflow-hidden">
@@ -61,15 +61,15 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center space-x-2">
                   <IconComponent className="h-6 w-6 text-white" />
-                  <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
+                  <span className={`px-3 py-1 text-xs font-semibold rounded-full flex items-center gap-1 ${
                     project.status === 'In Progress' 
                       ? 'bg-yellow-500/90 text-yellow-900' 
                       : 'bg-green-500/90 text-green-900'
                   }`}>
-                    {project.status}
+                    {project.status === 'In Progress' ? '🔄' : '✅'} {project.status}
                   </span>
                 </div>
-                <div className="flex items-center text-white/80 text-sm">
+                <div className="flex items-center text-white/80 text-sm bg-black/30 rounded-full px-3 py-1">
                   <Calendar className="h-4 w-4 mr-1" />
                   {project.timeline}
                 </div>
@@ -79,41 +79,54 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
           
           {/* Action buttons - appear on hover */}
           <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <Button size="sm" variant="default" className="bg-[hsl(var(--theme-primary))] hover:bg-[hsl(var(--theme-accent))] shadow-lg">
-              <ExternalLink className="h-4 w-4 mr-1" /> View
-            </Button>
-            <Button size="sm" variant="outline" className="bg-black/30 hover:bg-black/50 text-white border-white/30 shadow-lg">
-              <Github className="h-4 w-4 mr-1" /> Code
-            </Button>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button size="sm" variant="default" className="btn-primary text-sm">
+                  🔗 Live Demo
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>View Live Project</TooltipContent>
+            </Tooltip>
+            
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button size="sm" variant="outline" className="bg-black/30 hover:bg-black/50 text-white border-white/30 shadow-lg text-sm">
+                  💻 Source Code
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>GitHub Repository</TooltipContent>
+            </Tooltip>
           </div>
         </div>
         
         {/* Content Section */}
         <div className="p-8 flex flex-col flex-grow">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-2xl font-bold text-[hsl(var(--card-foreground))] group-hover:text-[hsl(var(--theme-primary))] transition-colors">
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 group-hover:text-[hsl(var(--theme-primary))] transition-colors">
               {project.title}
             </h2>
-            <div className="w-12 h-12 bg-gradient-to-br from-[hsl(var(--theme-primary))] to-[hsl(var(--theme-accent))] rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-gradient-to-br from-[hsl(var(--theme-primary))] to-[hsl(var(--theme-accent))] rounded-full flex items-center justify-center shadow-lg">
               <IconComponent className="h-6 w-6 text-white" />
             </div>
           </div>
           
           <div className="mb-4">
-            <p className="text-sm text-[hsl(var(--theme-primary))] font-semibold mb-1">Role: {project.role}</p>
-            <p className="text-[hsl(var(--card-foreground))] text-sm leading-relaxed flex-grow">
+            <p className="text-sm text-[hsl(var(--theme-primary))] font-semibold mb-2 flex items-center gap-1">
+              {project.role}
+            </p>
+            <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed flex-grow">
               {project.description}
             </p>
           </div>
           
           {/* Technologies Section */}
           <div className="mt-auto">
-            <h3 className="text-sm font-semibold text-[hsl(var(--muted-foreground))] mb-3">Technologies Used:</h3>
+            <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-3">Technologies Used:</h3>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech, techIndex) => (
                 <motion.span 
                   key={tech} 
-                  className="px-3 py-1 bg-gradient-to-r from-[hsla(var(--theme-secondary),0.3)] to-[hsla(var(--theme-primary),0.2)] text-[hsl(var(--secondary-foreground))] text-xs rounded-full border border-[hsl(var(--theme-primary)/0.2)] hover:border-[hsl(var(--theme-primary))] transition-colors"
+                  className="px-3 py-1 bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 text-blue-800 dark:text-blue-300 text-xs rounded-full border border-blue-200 dark:border-blue-700 hover:border-[hsl(var(--theme-primary))] transition-colors font-medium"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.4 + index * 0.2 + techIndex * 0.1 }}
@@ -134,9 +147,9 @@ const PortfolioPage = () => {
     <div className="relative min-h-screen overflow-hidden">
       {/* Enhanced animated background */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-400/20 to-purple-400/20 dark:from-blue-600/10 dark:to-purple-600/10 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-r from-cyan-400/20 to-teal-400/20 dark:from-cyan-600/10 dark:to-teal-600/10 rounded-full filter blur-3xl animate-pulse" style={{animationDuration: '8s', animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[32rem] h-[32rem] bg-gradient-to-r from-indigo-400/15 to-pink-400/15 dark:from-indigo-600/8 dark:to-pink-600/8 rounded-full filter blur-3xl animate-pulse" style={{animationDuration: '12s', animationDelay: '4s'}}></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-400/20 to-purple-400/20 dark:from-blue-600/30 dark:to-purple-600/30 rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-r from-cyan-400/20 to-teal-400/20 dark:from-cyan-600/30 dark:to-teal-600/30 rounded-full filter blur-3xl animate-pulse" style={{animationDuration: '8s', animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[32rem] h-[32rem] bg-gradient-to-r from-indigo-400/15 to-pink-400/15 dark:from-indigo-600/25 dark:to-pink-600/25 rounded-full filter blur-3xl animate-pulse" style={{animationDuration: '12s', animationDelay: '4s'}}></div>
       </div>
       
       <div className="container-max section-padding relative z-10">
@@ -146,11 +159,11 @@ const PortfolioPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-[hsl(var(--theme-primary))] to-[hsl(var(--theme-accent))] bg-clip-text text-transparent">
+          <h1 className="text-4xl lg:text-5xl font-bold mb-6 gradient-text">
             My Projects
           </h1>
-          <p className="text-xl text-[hsl(var(--muted-foreground))] max-w-3xl mx-auto">
-            Explore my journey through innovative web development projects, each showcasing unique challenges and creative solutions.
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            A collection of my latest web development projects, highlighting practical problem-solving and hands-on learning.
           </p>
         </motion.div>
         
@@ -162,19 +175,19 @@ const PortfolioPage = () => {
         
         {/* Call to Action Section */}
         <motion.div
-          className="text-center bg-gradient-to-br from-[hsla(var(--theme-primary),0.1)] to-[hsla(var(--theme-accent),0.05)] p-12 rounded-2xl backdrop-blur-sm border border-[hsl(var(--border)/0.2)] shadow-xl"
+          className="text-center glass-card p-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <Globe className="h-16 w-16 text-[hsl(var(--theme-primary))] mx-auto mb-6" />
-          <h2 className="text-4xl font-bold text-[hsl(var(--theme-text))] mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200 mb-4">
             Ready to Start Something Amazing?
           </h2>
-          <p className="text-xl text-[hsl(var(--muted-foreground))] mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
             I'm always excited to work on new projects and collaborate with innovative teams. Let's build something incredible together!
           </p>
-          <Button size="lg" className="bg-gradient-to-r from-[hsl(var(--theme-primary))] to-[hsl(var(--theme-accent))] hover:from-[hsl(var(--theme-accent))] hover:to-[hsl(var(--theme-primary))] text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+          <Button size="lg" className="btn-primary text-lg px-8 py-4">
             Let's Collaborate
           </Button>
         </motion.div>

@@ -20,9 +20,9 @@ export default {
 		},
 		extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        heading: ['Poppins', 'sans-serif'],
-        'roboto-slab': ['"Roboto Slab"', 'serif'], // Added Roboto Slab
+        sans: ['Sora', 'Inter', 'sans-serif'],
+        heading: ['Sora', 'Poppins', 'sans-serif'],
+        'roboto-slab': ['"Roboto Slab"', 'serif'],
       },
 			colors: {
 				border: 'hsl(var(--border))',
@@ -120,4 +120,3 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-
