@@ -36,13 +36,23 @@ const AboutPage = () => {
             custom={0}
           >
             <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-[hsl(var(--theme-primary))] to-[hsl(var(--theme-accent))] blur-md opacity-75 group-hover:opacity-100 transition duration-200" style={{clipPath: "polygon(25% 6%, 84% 14%, 100% 43%, 95% 81%, 68% 100%, 17% 95%, 0% 64%, 12% 28%)"}}></div>
-              <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden shadow-2xl" style={{clipPath: "polygon(25% 6%, 84% 14%, 100% 43%, 95% 81%, 68% 100%, 17% 95%, 0% 64%, 12% 28%)"}}>
-                <img 
-                  src="/lovable-uploads/5ff9315d-16b2-4aa1-bd45-06c2e352463e.png" 
-                  alt="Jayita Maji" 
-                  className="w-full h-full object-cover"
-                />
+              {/* Outer blob glow effect */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-[hsl(var(--theme-primary))] to-[hsl(var(--theme-accent))] blur-lg opacity-60 transition duration-300" 
+                style={{clipPath: "polygon(30% 10%, 70% 5%, 90% 25%, 95% 60%, 85% 85%, 60% 95%, 25% 90%, 5% 70%, 10% 40%, 20% 15%)"}}></div>
+              
+              {/* Main image container with blob shape */}
+              <div className="relative w-72 h-72 md:w-80 md:h-80 overflow-hidden shadow-2xl bg-gradient-to-br from-[hsl(var(--theme-primary))] to-[hsl(var(--theme-accent))] p-1" 
+                style={{clipPath: "polygon(30% 10%, 70% 5%, 90% 25%, 95% 60%, 85% 85%, 60% 95%, 25% 90%, 5% 70%, 10% 40%, 20% 15%)"}}>
+                
+                {/* Inner image with slightly smaller blob */}
+                <div className="w-full h-full overflow-hidden" 
+                  style={{clipPath: "polygon(32% 12%, 68% 7%, 88% 27%, 93% 58%, 83% 83%, 62% 93%, 27% 88%, 7% 68%, 12% 42%, 22% 17%)"}}>
+                  <img 
+                    src="/lovable-uploads/5ff9315d-16b2-4aa1-bd45-06c2e352463e.png" 
+                    alt="Jayita Maji" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
             <div className="flex items-center justify-center mt-8 space-x-4">
