@@ -178,4 +178,21 @@
   .dark .btn-primary {
     @apply shadow-[0_4px_20px_hsl(var(--theme-primary)/0.4)] hover:shadow-[0_8px_25px_hsl(var(--theme-primary)/0.6)];
   }
+
+  /* Secondary button styles - Fixed for dark mode */
+  .btn-secondary {
+    @apply bg-transparent border-2 border-[hsl(var(--theme-primary))] text-[hsl(var(--theme-primary))] font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-[hsl(var(--theme-primary))] text-white shadow-lg;
+  }
+
+  .dark .btn-secondary {
+    @apply border-[hsl(var(--theme-secondary))] text-[hsl(var(--theme-secondary))];
+  }
+
+  .dark .btn-secondary:hover {
+    @apply bg-[hsl(var(--theme-secondary))] text-[hsl(var(--theme-bg-start))] shadow-[0_4px_20px_hsl(var(--theme-secondary)/0.4)];
+  }
 }

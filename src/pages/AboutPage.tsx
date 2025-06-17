@@ -123,18 +123,49 @@ const AboutPage = () => {
           <h2 className="flex items-center text-3xl font-bold mb-8 text-[hsl(var(--theme-primary))]">
             <Award className="mr-3 h-8 w-8" /> Certifications
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white/50 dark:bg-black/20 p-6 rounded-lg border border-[hsl(var(--border))]">
-              <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-2">Intel® Unnati Training</h3>
-              <p className="text-sm text-[hsl(var(--muted-foreground))]">Intel (May 2025)</p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white/50 dark:bg-black/20 p-6 rounded-lg border border-[hsl(var(--border))] hover:border-[hsl(var(--theme-primary))] transition-all duration-300 hover:shadow-lg">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-[hsl(var(--theme-primary))] rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-1">Intel® Unnati Training</h3>
+                  <p className="text-sm text-[hsl(var(--theme-primary))] font-medium">Intel</p>
+                  <p className="text-xs text-[hsl(var(--muted-foreground))]">May 2025</p>
+                </div>
+              </div>
             </div>
-            <div className="bg-white/50 dark:bg-black/20 p-6 rounded-lg border border-[hsl(var(--border))]">
-              <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-2">Spoken Tutorial Project - Java</h3>
-              <p className="text-sm text-[hsl(var(--muted-foreground))]">IIT Bombay (May 2025)</p>
+            
+            <div className="bg-white/50 dark:bg-black/20 p-6 rounded-lg border border-[hsl(var(--border))] hover:border-[hsl(var(--theme-primary))] transition-all duration-300 hover:shadow-lg">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-[hsl(var(--theme-accent))] rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-1">Spoken Tutorial Project - Java</h3>
+                  <p className="text-sm text-[hsl(var(--theme-primary))] font-medium">IIT Bombay</p>
+                  <p className="text-xs text-[hsl(var(--muted-foreground))]">May 2025</p>
+                </div>
+              </div>
             </div>
-            <div className="bg-white/50 dark:bg-black/20 p-6 rounded-lg border border-[hsl(var(--border))]">
-              <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-2">Advanced Software Engineering</h3>
-              <p className="text-sm text-[hsl(var(--muted-foreground))]">Walmart Global Tech & Forage (April 2025)</p>
+
+            <div className="bg-white/50 dark:bg-black/20 p-6 rounded-lg border border-[hsl(var(--border))] hover:border-[hsl(var(--theme-primary))] transition-all duration-300 hover:shadow-lg">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-[hsl(var(--theme-secondary))] rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-1">Spoken Tutorial Project - PHP & MySQL</h3>
+                  <p className="text-sm text-[hsl(var(--theme-primary))] font-medium">IIT Bombay</p>
+                  <p className="text-xs text-[hsl(var(--muted-foreground))]">May 2025</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white/50 dark:bg-black/20 p-6 rounded-lg border border-[hsl(var(--border))] hover:border-[hsl(var(--theme-primary))] transition-all duration-300 hover:shadow-lg">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-[hsl(var(--theme-primary))] rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-1">Advanced Software Engineering</h3>
+                  <p className="text-sm text-[hsl(var(--theme-primary))] font-medium">Walmart Global Tech & Forage</p>
+                  <p className="text-xs text-[hsl(var(--muted-foreground))]">April 2025</p>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
