@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { School, Briefcase, Github, Linkedin, Mail, Award, Users } from "lucide-react"; 
 
@@ -37,10 +36,10 @@ const AboutPage = () => {
             custom={0}
           >
             <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-[hsl(var(--theme-primary))] to-[hsl(var(--theme-accent))] blur-md opacity-75 group-hover:opacity-100 transition duration-200" style={{clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"}}></div>
-              <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden shadow-2xl" style={{clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"}}>
+              <div className="absolute -inset-1 bg-gradient-to-r from-[hsl(var(--theme-primary))] to-[hsl(var(--theme-accent))] blur-md opacity-75 group-hover:opacity-100 transition duration-200" style={{clipPath: "polygon(25% 6%, 84% 14%, 100% 43%, 95% 81%, 68% 100%, 17% 95%, 0% 64%, 12% 28%)"}}></div>
+              <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden shadow-2xl" style={{clipPath: "polygon(25% 6%, 84% 14%, 100% 43%, 95% 81%, 68% 100%, 17% 95%, 0% 64%, 12% 28%)"}}>
                 <img 
-                  src="/lovable-uploads/895dad0c-bf3c-4c78-9c43-4336817e1ea8.png" 
+                  src="/lovable-uploads/5ff9315d-16b2-4aa1-bd45-06c2e352463e.png" 
                   alt="Jayita Maji" 
                   className="w-full h-full object-cover"
                 />
