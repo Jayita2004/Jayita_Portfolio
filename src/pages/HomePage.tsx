@@ -115,7 +115,7 @@ const HomePage = () => {
                   View Projects <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" asChild className="border-[hsl(var(--theme-primary))] text-[hsl(var(--theme-primary))] hover:bg-[hsl(var(--theme-primary))] hover:text-white dark:border-[hsl(var(--theme-primary))] dark:text-[hsl(var(--theme-primary))] group transition-all duration-300">
+              <Button variant="outline" size="lg" asChild className="border-[hsl(var(--theme-primary))] text-[hsl(var(--theme-primary))] hover:bg-[hsl(var(--theme-primary))] hover:text-white dark:btn-outline-fix group transition-all duration-300">
                 <a href="/JAYITA_MAJI_CV.pdf" download="Jayita_Maji_Resume.pdf">
                   Download Resume <Download className="ml-2 h-5 w-5 group-hover:rotate-[15deg] transition-transform" />
                 </a>

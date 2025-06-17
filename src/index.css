@@ -179,7 +179,7 @@
     @apply shadow-[0_4px_20px_hsl(var(--theme-primary)/0.4)] hover:shadow-[0_8px_25px_hsl(var(--theme-primary)/0.6)];
   }
 
-  /* Secondary button styles - Fixed for dark mode */
+  /* Secondary button styles - Fixed for dark mode visibility */
   .btn-secondary {
     @apply bg-transparent border-2 border-[hsl(var(--theme-primary))] text-[hsl(var(--theme-primary))] font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105;
   }
@@ -194,5 +194,14 @@
 
   .dark .btn-secondary:hover {
     @apply bg-[hsl(var(--theme-secondary))] text-[hsl(var(--theme-bg-start))] shadow-[0_4px_20px_hsl(var(--theme-secondary)/0.4)];
+  }
+
+  /* Fix for outline button in dark mode - ensure text visibility on hover */
+  .dark .btn-outline-fix {
+    @apply border-[hsl(var(--theme-secondary))] text-[hsl(var(--theme-secondary))];
+  }
+  
+  .dark .btn-outline-fix:hover {
+    @apply bg-[hsl(var(--theme-secondary))] text-[hsl(var(--theme-bg-start))] border-[hsl(var(--theme-secondary))];
   }
 }
