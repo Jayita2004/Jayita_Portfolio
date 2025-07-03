@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { School, Briefcase, Github, Linkedin, Mail, Award, Users } from "lucide-react"; 
 
@@ -35,24 +36,22 @@ const AboutPage = () => {
             animate="visible"
             custom={0}
           >
-            <div className="relative">
-              {/* Outer blob glow effect */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-[hsl(var(--theme-primary))] to-[hsl(var(--theme-accent))] blur-lg opacity-60 transition duration-300" 
-                style={{clipPath: "polygon(30% 10%, 70% 5%, 90% 25%, 95% 60%, 85% 85%, 60% 95%, 25% 90%, 5% 70%, 10% 40%, 20% 15%)"}}></div>
-              
-              {/* Main image container with blob shape */}
-              <div className="relative w-72 h-72 md:w-80 md:h-80 overflow-hidden shadow-2xl bg-gradient-to-br from-[hsl(var(--theme-primary))] to-[hsl(var(--theme-accent))] p-1" 
-                style={{clipPath: "polygon(30% 10%, 70% 5%, 90% 25%, 95% 60%, 85% 85%, 60% 95%, 25% 90%, 5% 70%, 10% 40%, 20% 15%)"}}>
-                
-                {/* Inner image with slightly smaller blob */}
-                <div className="w-full h-full overflow-hidden" 
-                  style={{clipPath: "polygon(32% 12%, 68% 7%, 88% 27%, 93% 58%, 83% 83%, 62% 93%, 27% 88%, 7% 68%, 12% 42%, 22% 17%)"}}>
-                  <img 
-                    src="/lovable-uploads/5ff9315d-16b2-4aa1-bd45-06c2e352463e.png" 
-                    alt="Jayita Maji" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 dark:from-blue-600 dark:via-purple-600 dark:to-pink-600 rounded-full blur-lg opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+              <div 
+                className="relative w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 shadow-2xl 
+                           transition-all duration-300 group-hover:shadow-3xl overflow-hidden border-4 border-white/50 dark:border-gray-700/50"
+                style={{
+                  borderRadius: '40% 60% 55% 45% / 60% 50% 55% 45%',
+                }}
+              >
+                <img 
+                  src="/lovable-uploads/5ff9315d-16b2-4aa1-bd45-06c2e352463e.png" 
+                  alt="Jayita Maji" 
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                  style={{ borderRadius: 'inherit' }} 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-transparent dark:from-blue-900/40"></div>
               </div>
             </div>
             <div className="flex items-center justify-center mt-8 space-x-4">
@@ -173,6 +172,28 @@ const AboutPage = () => {
                   <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-1">Advanced Software Engineering</h3>
                   <p className="text-sm text-[hsl(var(--theme-primary))] font-medium">Walmart Global Tech & Forage</p>
                   <p className="text-xs text-[hsl(var(--muted-foreground))]">April 2025</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/50 dark:bg-black/20 p-6 rounded-lg border border-[hsl(var(--border))] hover:border-[hsl(var(--theme-primary))] transition-all duration-300 hover:shadow-lg">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-[hsl(var(--theme-accent))] rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-1">Angular</h3>
+                  <p className="text-sm text-[hsl(var(--theme-primary))] font-medium">Infosys Springboard</p>
+                  <p className="text-xs text-[hsl(var(--muted-foreground))]">June 2025</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/50 dark:bg-black/20 p-6 rounded-lg border border-[hsl(var(--border))] hover:border-[hsl(var(--theme-primary))] transition-all duration-300 hover:shadow-lg">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-[hsl(var(--theme-secondary))] rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-1">Twitter Bootstrap</h3>
+                  <p className="text-sm text-[hsl(var(--theme-primary))] font-medium">Infosys Springboard</p>
+                  <p className="text-xs text-[hsl(var(--muted-foreground))]">June 2025</p>
                 </div>
               </div>
             </div>

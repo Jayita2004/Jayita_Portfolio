@@ -27,6 +27,8 @@ const skillsData = {
     { name: "Tailwind CSS", level: 85, icon: Palette },
     { name: "React", level: 80, icon: Layers },
     { name: "JavaScript", level: 85, icon: Code2 },
+    { name: "Angular", level: 70, icon: Layers },
+    { name: "Twitter Bootstrap", level: 80, icon: Palette },
   ],
   database: [
     { name: "MySQL", level: 75, icon: Database },
@@ -35,6 +37,7 @@ const skillsData = {
     { name: "Git", level: 85, icon: GitBranch },
     { name: "GitHub", level: 85, icon: Github },
     { name: "VS Code", level: 90, icon: Terminal },
+    { name: "Vercel", level: 75, icon: Server },
   ],
   concepts: [
     "Data Structures & Algorithms",
