@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input"; 
@@ -7,11 +6,25 @@ import { Github, Linkedin, Mail, Phone, Send, Instagram } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 const ContactPage = () => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Basic form handling, can be expanded with emailjs or backend
-    alert("Message sent (this is a demo)!");
-    (e.target as HTMLFormElement).reset();
+
+    const formData = new FormData(e.currentTarget);
+
+    const response = await fetch("https://formspree.io/f/mnnvrbpk", {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      },
+    });
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+      e.currentTarget.reset();
+    } else {
+      alert("Oops! Something went wrong. Please try again.");
+    }
   };
 
   return (

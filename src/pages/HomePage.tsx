@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Brain, Code, Github, Linkedin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -116,7 +115,7 @@ const HomePage = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild className="border-[hsl(var(--theme-primary))] text-[hsl(var(--theme-primary))] hover:bg-[hsl(var(--theme-primary))] hover:text-white dark:btn-outline-fix group transition-all duration-300">
-                <a href="/JAYITA_MAJI_CV.pdf" download="Jayita_Maji_Resume.pdf">
+                <a href="/JAYITA_MAJI_Resume.pdf" target="_blank" rel="noopener noreferrer">
                   Download Resume <Download className="ml-2 h-5 w-5 group-hover:rotate-[15deg] transition-transform" />
                 </a>
               </Button>

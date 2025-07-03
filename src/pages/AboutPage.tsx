@@ -1,11 +1,10 @@
-
 import { motion } from "framer-motion";
-import { School, Briefcase, Github, Linkedin, Mail, Award, Users } from "lucide-react"; 
+import { School, Github, Linkedin, Mail, Award, Users } from "lucide-react";
 
 const AboutPage = () => {
   const sectionVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: (i:number) => ({
+    visible: (i: number) => ({
       opacity: 1,
       y: 0,
       transition: {
@@ -18,7 +17,7 @@ const AboutPage = () => {
   return (
     <div className="relative min-h-screen">
       <div className="container-max section-padding relative z-10">
-        <motion.h1 
+        <motion.h1
           className="text-4xl lg:text-5xl font-bold mb-12 text-center text-[hsl(var(--theme-primary))]"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -38,30 +37,42 @@ const AboutPage = () => {
           >
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 dark:from-blue-600 dark:via-purple-600 dark:to-pink-600 rounded-full blur-lg opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-              <div 
-                className="relative w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 shadow-2xl 
-                           transition-all duration-300 group-hover:shadow-3xl overflow-hidden border-4 border-white/50 dark:border-gray-700/50"
+              <div
+                className="relative w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 shadow-2xl transition-all duration-300 group-hover:shadow-3xl overflow-hidden border-4 border-white/50 dark:border-gray-700/50"
                 style={{
-                  borderRadius: '40% 60% 55% 45% / 60% 50% 55% 45%',
+                  borderRadius: "40% 60% 55% 45% / 60% 50% 55% 45%",
                 }}
               >
-                <img 
-                  src="/lovable-uploads/5ff9315d-16b2-4aa1-bd45-06c2e352463e.png" 
-                  alt="Jayita Maji" 
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
-                  style={{ borderRadius: 'inherit' }} 
+                <img
+                  src="/lovable-uploads/5ff9315d-16b2-4aa1-bd45-06c2e352463e.png"
+                  alt="Jayita Maji"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  style={{ borderRadius: "inherit" }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-transparent dark:from-blue-900/40"></div>
               </div>
             </div>
             <div className="flex items-center justify-center mt-8 space-x-4">
-              <a href="mailto:jayitamaji2004@gmail.com" className="p-3 bg-[hsla(var(--theme-bg-start),0.5)] backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-transform hover:scale-110">
+              <a
+                href="mailto:jayitamaji2004@gmail.com"
+                className="p-3 bg-[hsla(var(--theme-bg-start),0.5)] backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-transform hover:scale-110"
+              >
                 <Mail className="h-6 w-6 text-[hsl(var(--theme-primary))]" />
               </a>
-              <a href="https://github.com/Jayita2004" target="_blank" rel="noopener noreferrer" className="p-3 bg-[hsla(var(--theme-bg-start),0.5)] backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-transform hover:scale-110">
+              <a
+                href="https://github.com/Jayita2004"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-[hsla(var(--theme-bg-start),0.5)] backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-transform hover:scale-110"
+              >
                 <Github className="h-6 w-6 text-[hsl(var(--theme-primary))]" />
               </a>
-              <a href="https://www.linkedin.com/in/jayita-maji-56a221303" target="_blank" rel="noopener noreferrer" className="p-3 bg-[hsla(var(--theme-bg-start),0.5)] backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-transform hover:scale-110">
+              <a
+                href="https://www.linkedin.com/in/jayita-maji-56a221303"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-[hsla(var(--theme-bg-start),0.5)] backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-transform hover:scale-110"
+              >
                 <Linkedin className="h-6 w-6 text-[hsl(var(--theme-primary))]" />
               </a>
             </div>
@@ -86,8 +97,8 @@ const AboutPage = () => {
           </motion.div>
         </div>
 
-        {/* Education Section */}
-        <motion.div 
+        {/* Education */}
+        <motion.div
           className="mt-16 bg-gradient-to-br from-[hsla(var(--theme-bg-start),0.3)] to-[hsla(var(--theme-accent),0.05)] p-8 rounded-xl shadow-lg backdrop-blur-sm border border-[hsl(var(--border)/0.1)]"
           variants={sectionVariants}
           initial="hidden"
@@ -120,8 +131,8 @@ const AboutPage = () => {
           </div>
         </motion.div>
 
-        {/* Certifications Section */}
-        <motion.div 
+        {/* Certifications */}
+        <motion.div
           className="mt-16 bg-gradient-to-br from-[hsla(var(--theme-accent),0.1)] to-[hsla(var(--theme-secondary),0.05)] p-8 rounded-xl shadow-lg backdrop-blur-sm border border-[hsl(var(--border)/0.1)]"
           variants={sectionVariants}
           initial="hidden"
@@ -132,76 +143,34 @@ const AboutPage = () => {
             <Award className="mr-3 h-8 w-8" /> Certifications
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white/50 dark:bg-black/20 p-6 rounded-lg border border-[hsl(var(--border))] hover:border-[hsl(var(--theme-primary))] transition-all duration-300 hover:shadow-lg">
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-[hsl(var(--theme-primary))] rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-1">Intel® Unnati Training</h3>
-                  <p className="text-sm text-[hsl(var(--theme-primary))] font-medium">Intel</p>
-                  <p className="text-xs text-[hsl(var(--muted-foreground))]">May 2025</p>
+            {[
+              { title: "Intel® Unnati Training", org: "Intel", file: "Intel_Certificate.pdf", color: "--theme-primary" },
+              { title: "Spoken Tutorial Project - Java", org: "IIT Bombay", file: "Spoken_Tutorial-Java.pdf", color: "--theme-accent" },
+              { title: "Spoken Tutorial Project - PHP & MySQL", org: "IIT Bombay", file: "Spoken_Tutorial-php_sql.pdf", color: "--theme-secondary" },
+              { title: "Advanced Software Engineering", org: "Walmart Global Tech & Forage", file: "Walmart_Certificate.pdf", color: "--theme-primary" },
+              { title: "Angular", org: "Infosys Springboard", file: "infosys_angular.pdf", color: "--theme-accent" },
+              { title: "Twitter Bootstrap", org: "Infosys Springboard", file: "infosys_twitter_bootstrap.pdf", color: "--theme-secondary" },
+            ].map((cert, i) => (
+              <div
+                key={i}
+                onClick={() => window.open(`/${cert.file}`, "_blank")}
+                className="cursor-pointer bg-white/50 dark:bg-black/20 p-6 rounded-lg border border-[hsl(var(--border))] hover:border-[hsl(var(--theme-primary))] transition-all duration-300 hover:shadow-lg"
+              >
+                <div className="flex items-start space-x-3">
+                  <div className={`w-2 h-2 bg-[hsl(var(${cert.color}))] rounded-full mt-2 flex-shrink-0`}></div>
+                  <div>
+                    <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-1">{cert.title}</h3>
+                    <p className="text-sm text-[hsl(var(--theme-primary))] font-medium">{cert.org}</p>
+                    <p className="text-xs text-[hsl(var(--muted-foreground))]">May 2025</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            
-            <div className="bg-white/50 dark:bg-black/20 p-6 rounded-lg border border-[hsl(var(--border))] hover:border-[hsl(var(--theme-primary))] transition-all duration-300 hover:shadow-lg">
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-[hsl(var(--theme-accent))] rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-1">Spoken Tutorial Project - Java</h3>
-                  <p className="text-sm text-[hsl(var(--theme-primary))] font-medium">IIT Bombay</p>
-                  <p className="text-xs text-[hsl(var(--muted-foreground))]">May 2025</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white/50 dark:bg-black/20 p-6 rounded-lg border border-[hsl(var(--border))] hover:border-[hsl(var(--theme-primary))] transition-all duration-300 hover:shadow-lg">
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-[hsl(var(--theme-secondary))] rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-1">Spoken Tutorial Project - PHP & MySQL</h3>
-                  <p className="text-sm text-[hsl(var(--theme-primary))] font-medium">IIT Bombay</p>
-                  <p className="text-xs text-[hsl(var(--muted-foreground))]">May 2025</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white/50 dark:bg-black/20 p-6 rounded-lg border border-[hsl(var(--border))] hover:border-[hsl(var(--theme-primary))] transition-all duration-300 hover:shadow-lg">
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-[hsl(var(--theme-primary))] rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-1">Advanced Software Engineering</h3>
-                  <p className="text-sm text-[hsl(var(--theme-primary))] font-medium">Walmart Global Tech & Forage</p>
-                  <p className="text-xs text-[hsl(var(--muted-foreground))]">April 2025</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white/50 dark:bg-black/20 p-6 rounded-lg border border-[hsl(var(--border))] hover:border-[hsl(var(--theme-primary))] transition-all duration-300 hover:shadow-lg">
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-[hsl(var(--theme-accent))] rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-1">Angular</h3>
-                  <p className="text-sm text-[hsl(var(--theme-primary))] font-medium">Infosys Springboard</p>
-                  <p className="text-xs text-[hsl(var(--muted-foreground))]">June 2025</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white/50 dark:bg-black/20 p-6 rounded-lg border border-[hsl(var(--border))] hover:border-[hsl(var(--theme-primary))] transition-all duration-300 hover:shadow-lg">
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-[hsl(var(--theme-secondary))] rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-1">Twitter Bootstrap</h3>
-                  <p className="text-sm text-[hsl(var(--theme-primary))] font-medium">Infosys Springboard</p>
-                  <p className="text-xs text-[hsl(var(--muted-foreground))]">June 2025</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </motion.div>
 
-        {/* Additional Information Section */}
-        <motion.div 
+        {/* Activities */}
+        <motion.div
           className="mt-16 bg-gradient-to-br from-[hsla(var(--theme-secondary),0.1)] to-[hsla(var(--theme-primary),0.05)] p-8 rounded-xl shadow-lg backdrop-blur-sm border border-[hsl(var(--border)/0.1)]"
           variants={sectionVariants}
           initial="hidden"
