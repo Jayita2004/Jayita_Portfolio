@@ -28,7 +28,8 @@ This is my **personal portfolio website** where you can:
 If you’d like to connect, collaborate, or just say hi:
 - 📧 [jayitamaji2004@gmail.com](mailto:jayitamaji2004@gmail.com)
 - 🔗 [LinkedIn](https://www.linkedin.com/in/jayita-maji-56a221303)
-- 🐙 [GitHub](https://github.com/Jayita2004)
+- 🧰 [GitHub](https://github.com/Jayita2004)
+- ⛓️ [Twitter](https://x.com/Jayi_04)
 
 ---
 
