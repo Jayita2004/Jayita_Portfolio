@@ -11,7 +11,7 @@ This is my **personal portfolio website** where you can:
 
 ## ✨ Tech Stack
 
-- **Frontend:** React.js, Tailwind CSS, Framer Motion 
+- React.js, Tailwind CSS, Framer Motion, TypeScript 
 - **Contact Form:** Formspree integration
 - **Deployment:** Vercel
 
