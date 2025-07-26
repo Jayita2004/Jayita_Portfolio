@@ -28,7 +28,7 @@ const projects = [
       "GitHub Actions",
     ],
     role: "👨‍💻 Full Stack Developer",
-    timeline: "Feb 2025 - Present",
+    timeline: "June 2025 - Present",
     status: "In Progress",
     link: "#",
     github: "#",

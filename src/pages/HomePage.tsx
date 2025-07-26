@@ -3,6 +3,7 @@ import { ArrowRight, Download, Brain, Code, Github, Linkedin, Instagram } from "
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { FaXTwitter } from "react-icons/fa6"; // ← NEW
 
 // Enhanced ProfileImagePlaceholder with soft gradient and glow
 const ProfileImagePlaceholder = () => (
@@ -31,6 +32,7 @@ const ProfileImagePlaceholder = () => (
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.6, duration: 0.4 }}
     >
+      {/* GitHub */}
       <Tooltip>
         <TooltipTrigger asChild>
           <a 
@@ -44,7 +46,8 @@ const ProfileImagePlaceholder = () => (
         </TooltipTrigger>
         <TooltipContent>GitHub</TooltipContent>
       </Tooltip>
-      
+
+      {/* LinkedIn */}
       <Tooltip>
         <TooltipTrigger asChild>
           <a 
@@ -58,7 +61,8 @@ const ProfileImagePlaceholder = () => (
         </TooltipTrigger>
         <TooltipContent>LinkedIn</TooltipContent>
       </Tooltip>
-      
+
+      {/* Instagram */}
       <Tooltip>
         <TooltipTrigger asChild>
           <a 
@@ -72,6 +76,22 @@ const ProfileImagePlaceholder = () => (
         </TooltipTrigger>
         <TooltipContent>Instagram</TooltipContent>
       </Tooltip>
+
+      {/* Twitter */}
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <a 
+            href="https://x.com/Jayi_04" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-gray-700 dark:text-gray-300 hover:text-[hsl(var(--theme-primary))] transition-colors p-3 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300"
+    >
+             <FaXTwitter size={20} />
+          </a>
+        </TooltipTrigger>
+        <TooltipContent>Twitter</TooltipContent>
+      </Tooltip>
+
     </motion.div>
   </div>
 );
@@ -99,15 +119,14 @@ const HomePage = () => {
                 Web Development Enthusiast | Aspiring Software Developer
               </p>
             </div>
-            
-            {/* New Intro Paragraph */}
+
             <div className="mb-8">
               <p className="text-base lg:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
                 I'm a Computer Science student passionate about building responsive web interfaces. 
                 Currently working on full-stack projects using React and modern web technologies.
               </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button asChild size="lg" className="btn-primary group">
                 <Link to="/portfolio"> 
@@ -115,13 +134,13 @@ const HomePage = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild className="border-[hsl(var(--theme-primary))] text-[hsl(var(--theme-primary))] hover:bg-[hsl(var(--theme-primary))] hover:text-white dark:btn-outline-fix group transition-all duration-300">
-                <a href="/JAYITA_MAJI_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/JAYITA_MAJI_RESUME_PDF.pdf" target="_blank" rel="noopener noreferrer">
                   Download Resume <Download className="ml-2 h-5 w-5 group-hover:rotate-[15deg] transition-transform" />
                 </a>
               </Button>
             </div>
           </motion.div>
-          
+
           <motion.div 
             className="flex justify-center items-center"
             initial={{ opacity: 0, x: 50 }}

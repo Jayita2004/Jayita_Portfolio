@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input"; 
 import { Textarea } from "@/components/ui/textarea";
 import { Github, Linkedin, Mail, Phone, Send, Instagram } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6"; // ← NEW
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 const ContactPage = () => {
@@ -131,11 +132,11 @@ const ContactPage = () => {
                 <div className="flex gap-4">
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <a href="https://github.com/Jayita2004" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-blue-100 dark:bg-blue-900/30 hover:bg-[hsl(var(--theme-primary))] text-gray-700 dark:text-gray-300 hover:text-white transition-all duration-300 hover:scale-110">
-                        <Github size={22} />
+                      <a href="https://x.com/Jayi_04" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-blue-100 dark:bg-blue-900/30 hover:bg-[hsl(var(--theme-primary))] text-gray-700 dark:text-gray-300 hover:text-white transition-all duration-300 hover:scale-110">
+                        <FaXTwitter size={22} /> 
                       </a>
                     </TooltipTrigger>
-                    <TooltipContent>GitHub</TooltipContent>
+                    <TooltipContent>Twitter</TooltipContent> 
                   </Tooltip>
                   
                   <Tooltip>
@@ -154,15 +155,6 @@ const ContactPage = () => {
                       </a>
                     </TooltipTrigger>
                     <TooltipContent>Instagram</TooltipContent>
-                  </Tooltip>
-                  
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <a href="mailto:jayitamaji2004@gmail.com" className="p-3 rounded-lg bg-blue-100 dark:bg-blue-900/30 hover:bg-[hsl(var(--theme-primary))] text-gray-700 dark:text-gray-300 hover:text-white transition-all duration-300 hover:scale-110">
-                        <Mail size={22} />
-                      </a>
-                    </TooltipTrigger>
-                    <TooltipContent>Email</TooltipContent>
                   </Tooltip>
                 </div>
               </div>

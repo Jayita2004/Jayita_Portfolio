@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -14,12 +13,12 @@ import {
   Shield
 } from "lucide-react";
 import { SkillCard } from "@/components/SkillCard";
+import { SiMongodb } from "react-icons/si";
 
 const skillsData = {
   programming: [
     { name: "C", level: 85, icon: Code2 },
     { name: "Python", level: 80, icon: Code2 },
-    { name: "Java", level: 75, icon: Code2 },
   ],
   webTech: [
     { name: "HTML", level: 95, icon: Code2 },
@@ -27,11 +26,10 @@ const skillsData = {
     { name: "Tailwind CSS", level: 85, icon: Palette },
     { name: "React", level: 80, icon: Layers },
     { name: "JavaScript", level: 85, icon: Code2 },
-    { name: "Angular", level: 70, icon: Layers },
-    { name: "Twitter Bootstrap", level: 80, icon: Palette },
   ],
   database: [
     { name: "MySQL", level: 75, icon: Database },
+    { name: "MongoDB Atlas", level: 40, icon: Database }, // new
   ],
   tools: [
     { name: "Git", level: 85, icon: GitBranch },
@@ -59,7 +57,6 @@ const skillsData = {
 const SkillsPage = () => {
   return (
     <div className="relative min-h-screen">
-      {/* Enhanced background with floating elements */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-purple-400/20 dark:from-blue-600/10 dark:to-purple-600/10 rounded-full filter blur-3xl animate-pulse"></div>
       <div className="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-r from-cyan-400/20 to-teal-400/20 dark:from-cyan-600/10 dark:to-teal-600/10 rounded-full filter blur-3xl animate-pulse" style={{animationDuration: '7s', animationDelay: '2s'}}></div>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-indigo-400/15 to-pink-400/15 dark:from-indigo-600/8 dark:to-pink-600/8 rounded-full filter blur-3xl animate-pulse" style={{animationDuration: '10s', animationDelay: '4s'}}></div>
