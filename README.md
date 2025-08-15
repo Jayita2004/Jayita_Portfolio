@@ -9,7 +9,7 @@ This is my **personal portfolio website** where you can:
 
 ---
 
-## ✨ Tech Stack
+## Tech Stack
 
 - React.js, Tailwind CSS, Framer Motion, TypeScript 
 - **Contact Form:** Formspree integration
@@ -17,23 +17,23 @@ This is my **personal portfolio website** where you can:
 
 ---
 
-## 🚀 Live Site
+## Live Site
 
 👉 [Visit my portfolio](https://jayita-portfolio.vercel.app)
 
 ---
 
-## 📬 Contact
+## Contact
 
 If you’d like to connect, collaborate, or just say hi:
-- 📧 [jayitamaji2004@gmail.com](mailto:jayitamaji2004@gmail.com)
-- 🔗 [LinkedIn](https://www.linkedin.com/in/jayita-maji-56a221303)
-- 🧰 [GitHub](https://github.com/Jayita2004)
-- ⛓️ [Twitter](https://x.com/Jayi_04)
+-  [jayitamaji2004@gmail.com](mailto:jayitamaji2004@gmail.com)
+-  [LinkedIn](https://www.linkedin.com/in/jayita-maji-56a221303)
+-  [GitHub](https://github.com/Jayita2004)
+-  [Twitter](https://x.com/Jayi_04)
 
 ---
 
-## 📌 License
+##  License
 
 This project is open source for learning and showcasing purposes.
 
