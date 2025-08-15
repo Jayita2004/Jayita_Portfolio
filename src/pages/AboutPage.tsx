@@ -144,6 +144,8 @@ const AboutPage = () => {
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
+              { title: "BigData & Data Science", org: "NIELIT Kolkata", file: "Certificate_Bootcamp_on_BigData_Data_Science_20-06-2025_28-06-2025_JAYITA.MAJI_188.pdf", color: "--theme-primary" },
+              { title: "Blockchain", org: "NIELIT Kolkata", file: "Certificate_Bootcamp_on_Blockchain_20-06-2025_28-06-2025_JAYITA.MAJI_188.pdf", color: "--theme-primary" },
               { title: "Intel® Unnati Training", org: "Intel", file: "Intel_Certificate.pdf", color: "--theme-primary" },
               { title: "Spoken Tutorial Project - Java", org: "IIT Bombay", file: "Spoken_Tutorial-Java.pdf", color: "--theme-accent" },
               { title: "Spoken Tutorial Project - PHP & MySQL", org: "IIT Bombay", file: "Spoken_Tutorial-php_sql.pdf", color: "--theme-secondary" },

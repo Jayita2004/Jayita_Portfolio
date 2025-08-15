@@ -17,13 +17,13 @@ import { SiMongodb } from "react-icons/si";
 
 const skillsData = {
   programming: [
-    { name: "C", level: 85, icon: Code2 },
-    { name: "Python", level: 80, icon: Code2 },
+    { name: "Python", level: 85, icon: Code2 },
+    { name: "C++", level: 60, icon: Code2 },
   ],
   webTech: [
     { name: "HTML", level: 95, icon: Code2 },
     { name: "CSS", level: 90, icon: Palette },
-    { name: "Tailwind CSS", level: 85, icon: Palette },
+    { name: "Node.js", level: 70, icon: Code2 },
     { name: "React", level: 80, icon: Layers },
     { name: "JavaScript", level: 85, icon: Code2 },
   ],
@@ -35,6 +35,7 @@ const skillsData = {
     { name: "Git", level: 85, icon: GitBranch },
     { name: "GitHub", level: 85, icon: Github },
     { name: "VS Code", level: 90, icon: Terminal },
+    { name: "Google Colab", level: 80, icon: Terminal },
     { name: "Vercel", level: 75, icon: Server },
   ],
   concepts: [
@@ -42,7 +43,7 @@ const skillsData = {
     "Database Management Systems",
     "Object-Oriented Programming",
     "Computer Networks",
-    "Web Development"
+    "Machine Learning"
   ],
   professional: [
     "Problem Solving",

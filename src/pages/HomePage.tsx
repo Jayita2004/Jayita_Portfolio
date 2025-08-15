@@ -134,7 +134,7 @@ const HomePage = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild className="border-[hsl(var(--theme-primary))] text-[hsl(var(--theme-primary))] hover:bg-[hsl(var(--theme-primary))] hover:text-white dark:btn-outline-fix group transition-all duration-300">
-                <a href="/JAYITA_MAJI_RESUME_PDF.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/Jayita__Maji_Resume.pdf" target="_blank" rel="noopener noreferrer">
                   Download Resume <Download className="ml-2 h-5 w-5 group-hover:rotate-[15deg] transition-transform" />
                 </a>
               </Button>
