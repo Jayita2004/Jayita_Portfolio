@@ -114,13 +114,13 @@ const AboutPage = () => {
               <h3 className="text-xl font-semibold text-[hsl(var(--theme-text))] mb-2">BTech CSE (AI&ML)</h3>
               <p className="text-lg text-[hsl(var(--theme-primary))] font-medium">Brainware University</p>
               <p className="text-sm text-[hsl(var(--muted-foreground))]">Aug 2022 - July 2026 (Expected)</p>
-              <p className="text-sm text-[hsl(var(--muted-foreground))] mt-1">Current SGPA: 9.23 (average up to 5th semester)</p>
+              <p className="text-sm text-[hsl(var(--muted-foreground))] mt-1">Current SGPA: 9.31 (average up to 6th semester)</p>
             </div>
             <div className="relative pl-6 border-l-2 border-[hsl(var(--theme-secondary))]">
               <div className="absolute -left-2 top-0 w-4 h-4 bg-[hsl(var(--theme-secondary))] rounded-full"></div>
               <h3 className="text-xl font-semibold text-[hsl(var(--theme-text))] mb-2">Higher Secondary (WBCHSE)</h3>
               <p className="text-lg text-[hsl(var(--theme-primary))] font-medium">Dakshin Moyna High School (H.S.)</p>
-              <p className="text-sm text-[hsl(var(--muted-foreground))]">2022 | Score: 96.4%</p>
+              <p className="text-sm text-[hsl(var(--muted-foreground))]">2022 | Score: 96.40%</p>
             </div>
             <div className="relative pl-6 border-l-2 border-[hsl(var(--theme-primary))]">
               <div className="absolute -left-2 top-0 w-4 h-4 bg-[hsl(var(--theme-primary))] rounded-full"></div>
@@ -144,14 +144,14 @@ const AboutPage = () => {
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { title: "BigData & Data Science", org: "NIELIT Kolkata", file: "Certificate_Bootcamp_on_BigData_Data_Science_20-06-2025_28-06-2025_JAYITA.MAJI_188.pdf", color: "--theme-primary" },
-              { title: "Blockchain", org: "NIELIT Kolkata", file: "Certificate_Bootcamp_on_Blockchain_20-06-2025_28-06-2025_JAYITA.MAJI_188.pdf", color: "--theme-primary" },
-              { title: "Intel® Unnati Training", org: "Intel", file: "Intel_Certificate.pdf", color: "--theme-primary" },
-              { title: "Spoken Tutorial Project - Java", org: "IIT Bombay", file: "Spoken_Tutorial-Java.pdf", color: "--theme-accent" },
-              { title: "Spoken Tutorial Project - PHP & MySQL", org: "IIT Bombay", file: "Spoken_Tutorial-php_sql.pdf", color: "--theme-secondary" },
-              { title: "Advanced Software Engineering", org: "Walmart Global Tech & Forage", file: "Walmart_Certificate.pdf", color: "--theme-primary" },
-              { title: "Angular", org: "Infosys Springboard", file: "infosys_angular.pdf", color: "--theme-accent" },
-              { title: "Twitter Bootstrap", org: "Infosys Springboard", file: "infosys_twitter_bootstrap.pdf", color: "--theme-secondary" },
+              { title: "BigData & Data Science", org: "NIELIT Kolkata", file: "Certificate_Bootcamp_on_BigData_Data_Science_20-06-2025_28-06-2025_JAYITA.MAJI_188.pdf", color: "--theme-primary", date: "June 2025"},
+              { title: "Blockchain", org: "NIELIT Kolkata", file: "Certificate_Bootcamp_on_Blockchain_20-06-2025_28-06-2025_JAYITA.MAJI_188.pdf", color: "--theme-primary", date: "June 2025"},
+              { title: "Angular", org: "Infosys Springboard", file: "infosys_angular.pdf", color: "--theme-accent", date: "June 2025"},
+              { title: "Twitter Bootstrap", org: "Infosys Springboard", file: "infosys_twitter_bootstrap.pdf", color: "--theme-secondary", date: "June 2025"},
+              { title: "Spoken Tutorial Project - Java", org: "IIT Bombay", file: "Spoken_Tutorial-Java.pdf", color: "--theme-accent", date: "May 2025" },
+              { title: "Spoken Tutorial Project - PHP & MySQL", org: "IIT Bombay", file: "Spoken_Tutorial-php_sql.pdf", color: "--theme-secondary", date: "May 2025"},
+              { title: "Intel® Unnati Training", org: "Intel", file: "Intel_Certificate.pdf", color: "--theme-primary", date: "April 2025" },
+              { title: "Advanced Software Engineering", org: "Walmart Global Tech & Forage", file: "Walmart_Certificate.pdf", color: "--theme-primary", date: "April 2025" },
             ].map((cert, i) => (
               <div
                 key={i}
@@ -163,7 +163,7 @@ const AboutPage = () => {
                   <div>
                     <h3 className="font-semibold text-[hsl(var(--theme-text))] mb-1">{cert.title}</h3>
                     <p className="text-sm text-[hsl(var(--theme-primary))] font-medium">{cert.org}</p>
-                    <p className="text-xs text-[hsl(var(--muted-foreground))]">May 2025</p>
+                    <p className="text-xs text-[hsl(var(--muted-foreground))]">{cert.date}</p>
                   </div>
                 </div>
               </div>

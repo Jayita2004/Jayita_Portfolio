@@ -29,7 +29,8 @@ const skillsData = {
   ],
   database: [
     { name: "MySQL", level: 75, icon: Database },
-    { name: "MongoDB Atlas", level: 40, icon: Database }, // new
+    { name: "MongoDB Atlas", level: 40, icon: Database }, 
+    { name: "AWS", level: 40, icon: Database}, // new
   ],
   tools: [
     { name: "Git", level: 85, icon: GitBranch },
@@ -43,7 +44,9 @@ const skillsData = {
     "Database Management Systems",
     "Object-Oriented Programming",
     "Computer Networks",
-    "Machine Learning"
+    "Neural Networks",
+    "Machine Learning",
+    "Artificial Intelligence"
   ],
   professional: [
     "Problem Solving",
