@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { School, Github, Linkedin, Mail, Award, Users } from "lucide-react";
+import { School, Github, Linkedin, Mail, Award, Users, Briefcase } from "lucide-react";
 
 const AboutPage = () => {
   const sectionVariants = {
@@ -96,6 +96,44 @@ const AboutPage = () => {
             </div>
           </motion.div>
         </div>
+      
+          {/* Internship Section */}
+          <motion.div
+              className="mt-16 bg-gradient-to-br from-[hsla(var(--theme-bg-start),0.3)] to-[hsla(var(--theme-accent),0.05)] p-8 rounded-xl shadow-lg backdrop-blur-sm border border-[hsl(var(--border)/0.1)]"
+              variants={sectionVariants}
+              initial="hidden"
+              animate="visible"
+              custom={2}
+>
+              <h2 className="flex items-center text-3xl font-bold mb-8 text-[hsl(var(--theme-primary))]">
+              <Briefcase className="mr-3 h-8 w-8" /> Virtual Internship 
+              </h2>
+  <div className="space-y-8">
+    <div className="relative pl-6 border-l-2 border-[hsl(var(--theme-accent))]">
+      <div className="absolute -left-2 top-0 w-4 h-4 bg-[hsl(var(--theme-accent))] rounded-full"></div>
+      <h3 className="text-xl font-semibold text-[hsl(var(--theme-text))] mb-2">
+        AICTE–Shell ML Intern (Edunet Foundation)
+      </h3>
+      <p className="text-lg text-[hsl(var(--theme-primary))] font-medium">Remote | July–August 2025</p>
+      <ul className="list-disc pl-5 mt-3 space-y-2 text-[hsl(var(--theme-text))]">
+        <li>
+          Completed a 4-week virtual internship on Artificial Intelligence & Data Analytics under the Skills4Future Program by AICTE, Shell India, and Edunet Foundation.
+        </li>
+        <li>
+          Developed an ML-based Fire Classification Model for deforestation detection using NASA MODIS satellite data.
+        </li>
+        <li>Achieved 97.86% accuracy using Random Forest Classifier.</li>
+        <li>Attended masterclasses on Git, GitHub, model evaluation, and resume building.</li>
+        <li>Worked in collaborative, team-based projects with weekly evaluations and presentations.</li>
+      </ul>
+      <p className="text-sm text-gray-600 mt-2">
+  <a href="Jayita  Maji_AICTE_Certificate.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+    View Completion Certificate
+  </a>
+</p>
+ </div>
+  </div>
+</motion.div>
 
         {/* Education */}
         <motion.div
