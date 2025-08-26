@@ -318,7 +318,7 @@ const PortfolioPage = () => {
             My Projects
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            A collection of my latest web development projects, highlighting
+            A collection of my latest projects, highlighting
             practical problem-solving and hands-on learning.
           </p>
         </motion.div>
