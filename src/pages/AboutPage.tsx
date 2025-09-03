@@ -182,6 +182,7 @@ const AboutPage = () => {
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
+              { title: "Beginner Full Stack Web Development:", org: "Udemy", file: "FullStack_Beginner_certificate.pdf", color: "--theme-primary", date: "August 2025"},
               { title: "BigData & Data Science", org: "NIELIT Kolkata", file: "Certificate_Bootcamp_on_BigData_Data_Science_20-06-2025_28-06-2025_JAYITA.MAJI_188.pdf", color: "--theme-primary", date: "June 2025"},
               { title: "Blockchain", org: "NIELIT Kolkata", file: "Certificate_Bootcamp_on_Blockchain_20-06-2025_28-06-2025_JAYITA.MAJI_188.pdf", color: "--theme-primary", date: "June 2025"},
               { title: "Angular", org: "Infosys Springboard", file: "infosys_angular.pdf", color: "--theme-accent", date: "June 2025"},
